@@ -1,0 +1,10 @@
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe.config
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.pdb
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csprojAssemblyReference.cache
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMain.resources
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.Properties.Resources.resources
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.GenerateResource.cache
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.CoreCompileInputs.cache
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.exe
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.pdb
