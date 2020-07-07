@@ -49,7 +49,7 @@
             this.CardBox21 = new System.Windows.Forms.PictureBox();
             this.CardBox20 = new System.Windows.Forms.PictureBox();
             this.CardBox19 = new System.Windows.Forms.PictureBox();
-            this.CardBox118 = new System.Windows.Forms.PictureBox();
+            this.CardBox18 = new System.Windows.Forms.PictureBox();
             this.CardBox17 = new System.Windows.Forms.PictureBox();
             this.CardBox16 = new System.Windows.Forms.PictureBox();
             this.CardBox15 = new System.Windows.Forms.PictureBox();
@@ -101,7 +101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CardBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CardBox118)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CardBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox15)).BeginInit();
@@ -202,6 +202,7 @@
             this.CardBox6.Size = new System.Drawing.Size(60, 90);
             this.CardBox6.TabIndex = 5;
             this.CardBox6.TabStop = false;
+            this.CardBox6.Tag = "draw";
             this.CardBox6.Click += new System.EventHandler(this.Card_Click);
             // 
             // CardBox5
@@ -344,15 +345,15 @@
             this.CardBox19.TabStop = false;
             this.CardBox19.Click += new System.EventHandler(this.Card_Click);
             // 
-            // CardBox118
+            // CardBox18
             // 
-            this.CardBox118.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox118.Location = new System.Drawing.Point(276, 108);
-            this.CardBox118.Name = "CardBox118";
-            this.CardBox118.Size = new System.Drawing.Size(60, 90);
-            this.CardBox118.TabIndex = 17;
-            this.CardBox118.TabStop = false;
-            this.CardBox118.Click += new System.EventHandler(this.Card_Click);
+            this.CardBox18.Image = global::NervousBreakdown.Properties.Resources.card;
+            this.CardBox18.Location = new System.Drawing.Point(276, 108);
+            this.CardBox18.Name = "CardBox18";
+            this.CardBox18.Size = new System.Drawing.Size(60, 90);
+            this.CardBox18.TabIndex = 17;
+            this.CardBox18.TabStop = false;
+            this.CardBox18.Click += new System.EventHandler(this.Card_Click);
             // 
             // CardBox17
             // 
@@ -694,7 +695,7 @@
             this.Controls.Add(this.CardBox21);
             this.Controls.Add(this.CardBox20);
             this.Controls.Add(this.CardBox19);
-            this.Controls.Add(this.CardBox118);
+            this.Controls.Add(this.CardBox18);
             this.Controls.Add(this.CardBox17);
             this.Controls.Add(this.CardBox16);
             this.Controls.Add(this.CardBox15);
@@ -714,6 +715,7 @@
             this.Controls.Add(this.CardBox1);
             this.Name = "FormMain";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CardBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox3)).EndInit();
@@ -735,7 +737,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CardBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CardBox118)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CardBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox15)).EndInit();
@@ -793,7 +795,7 @@
         private System.Windows.Forms.PictureBox CardBox21;
         private System.Windows.Forms.PictureBox CardBox20;
         private System.Windows.Forms.PictureBox CardBox19;
-        private System.Windows.Forms.PictureBox CardBox118;
+        private System.Windows.Forms.PictureBox CardBox18;
         private System.Windows.Forms.PictureBox CardBox17;
         private System.Windows.Forms.PictureBox CardBox16;
         private System.Windows.Forms.PictureBox CardBox15;
