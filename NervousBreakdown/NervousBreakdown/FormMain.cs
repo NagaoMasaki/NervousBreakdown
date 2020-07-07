@@ -12,17 +12,83 @@ namespace NervousBreakdown
 {
     public partial class FormMain : Form
     {
-       
+        Player player = new Player();
+        Card card = new Card();
+        Judge judge = new Judge();
+        Count count = new Count();
+
+        private PictureBox[] PictureArray = new PictureBox[53];
+
+        private bool drawFlag = false;
+        private bool twoDrawFlag = false;
+
+        private bool[] cardFlag = new bool[53];
+
         public FormMain()
         {
             InitializeComponent();
-
-            
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-           
+            //デッキをシャッフルする
+            card.CardMark();
+
+            PictureArray[0] = this.CardBox1;
+            PictureArray[1] = this.CardBox2;
+            PictureArray[2] = this.CardBox3;
+            PictureArray[3] = this.CardBox4;
+            PictureArray[4] = this.CardBox5;
+            PictureArray[5] = this.CardBox6;
+            PictureArray[6] = this.CardBox7;
+            PictureArray[7] = this.CardBox8;
+            PictureArray[8] = this.CardBox9;
+            PictureArray[9] = this.CardBox10;
+            PictureArray[10] = this.CardBox11;
+            PictureArray[11] = this.CardBox12;
+            PictureArray[12] = this.CardBox13;
+            PictureArray[13] = this.CardBox14;
+            PictureArray[14] = this.CardBox15;
+            PictureArray[15] = this.CardBox16;
+            PictureArray[16] = this.CardBox17;
+            PictureArray[17] = this.CardBox18;
+            PictureArray[18] = this.CardBox19;
+            PictureArray[19] = this.CardBox20;
+            PictureArray[20] = this.CardBox21;
+            PictureArray[21] = this.CardBox22;
+            PictureArray[22] = this.CardBox23;
+            PictureArray[23] = this.CardBox24;
+            PictureArray[24] = this.CardBox25;
+            PictureArray[25] = this.CardBox26;
+            PictureArray[26] = this.CardBox27;
+            PictureArray[27] = this.CardBox28;
+            PictureArray[28] = this.CardBox29;
+            PictureArray[29] = this.CardBox30;
+            PictureArray[30] = this.CardBox31;
+            PictureArray[31] = this.CardBox32;
+            PictureArray[32] = this.CardBox33;
+            PictureArray[33] = this.CardBox34;
+            PictureArray[34] = this.CardBox35;
+            PictureArray[35] = this.CardBox36;
+            PictureArray[36] = this.CardBox37;
+            PictureArray[37] = this.CardBox38;
+            PictureArray[38] = this.CardBox39;
+            PictureArray[39] = this.CardBox40;
+            PictureArray[40] = this.CardBox41;
+            PictureArray[41] = this.CardBox42;
+            PictureArray[42] = this.CardBox43;
+            PictureArray[43] = this.CardBox44;
+            PictureArray[44] = this.CardBox45;
+            PictureArray[45] = this.CardBox46;
+            PictureArray[46] = this.CardBox47;
+            PictureArray[47] = this.CardBox48;
+            PictureArray[48] = this.CardBox49;
+            PictureArray[49] = this.CardBox50;
+            PictureArray[50] = this.CardBox51;
+            PictureArray[51] = this.CardBox52;
+
+            //デバック用
+            //HitLabel.Text = drawFlag.ToString();
         }
 
         /// <summary>
@@ -32,370 +98,122 @@ namespace NervousBreakdown
         /// <param name="e"></param>
         private void Card_Click(object sender, EventArgs e)
         {
-            //クリックしたのはCardBox1か
-            if (sender.Equals(this.CardBox1))
+            bool hit = false;
+
+            for(int i = 0; i < PictureArray.Length;i++)
             {
-                //カードの画像を表示
-                this.CardBox1.Image = SetImage(1);
+                if (sender.Equals(PictureArray[i]))
+                {
+                    //カードの画像を表示
+                    PictureArray[i].Image = SetImage(card.decks[i]);
+
+                    //カードが裏向きか
+                    if (cardFlag[i] == false)
+                    {
+                        hit = judge.Judgement(drawFlag, card.decks[i]);
+                        player.Select(drawFlag, card.decks[i]);
+                    }
+
+                    //引いた判定にする
+                    cardFlag[i] = true;
+                }
             }
 
-            //クリックしたのはCardBox2
-            if (sender.Equals(this.CardBox2))
+
+            //カードを一枚引いているなら
+            if(drawFlag == true)
             {
-                //カードの画像を表示
-                this.CardBox2.Image = SetImage(2);
+                //二枚目を引いた判定にする
+                twoDrawFlag = true;
+            }
+            else
+            {
+                //一枚目を引いた判定にする
+                drawFlag = true;
             }
 
-            //クリックしたのはCardBox3
-            if (sender.Equals(this.CardBox3))
-            {
-                //カードの画像を表示
-                this.CardBox3.Image = SetImage(3);
-            }
+           
 
-            //クリックしたのはCardBox4か
-            if (sender.Equals(this.CardBox4))
-            {
-                //カードの画像を表示
-                this.CardBox4.Image = SetImage(4);
-            }
 
-            //クリックしたのはCardBox5
-            if (sender.Equals(this.CardBox5))
+            //デバック用
             {
-                //カードの画像を表示
-                this.CardBox5.Image = SetImage(5);
-            }
+                int a = count.GetCount();
 
-            //クリックしたのはCardBox6
-            if (sender.Equals(this.CardBox6))
-            {
-                //カードの画像を表示
-                this.CardBox6.Image = SetImage(6);
-            }
+                HitLabel.Text = a.ToString();
 
-            //クリックしたのはCardBo7か
-            if (sender.Equals(this.CardBox7))
-            {
-                //カードの画像を表示
-                this.CardBox7.Image = SetImage(7);
-            }
-
-            //クリックしたのはCardBox8
-            if (sender.Equals(this.CardBox8))
-            {
-                //カードの画像を表示
-                this.CardBox8.Image = SetImage(8);
-            }
-
-            //クリックしたのはCardBox9
-            if (sender.Equals(this.CardBox9))
-            {
-                //カードの画像を表示
-                this.CardBox9.Image = SetImage(9);
-            }
-
-            //クリックしたのはCardBox10か
-            if (sender.Equals(this.CardBox10))
-            {
-                //カードの画像を表示
-                this.CardBox10.Image = SetImage(10);
-            }
-
-            //クリックしたのはCardBox11
-            if (sender.Equals(this.CardBox11))
-            {
-                //カードの画像を表示
-                this.CardBox11.Image = SetImage(11);
-            }
-
-            //クリックしたのはCardBox12
-            if (sender.Equals(this.CardBox12))
-            {
-                //カードの画像を表示
-                this.CardBox12.Image = SetImage(12);
-            }
-
-            //クリックしたのはCardBox13
-            if (sender.Equals(this.CardBox13))
-            {
-                //カードの画像を表示
-                this.CardBox13.Image = SetImage(13);
-            }
-
-            //クリックしたのはCardBox14か
-            if (sender.Equals(this.CardBox14))
-            {
-                //カードの画像を表示
-                this.CardBox14.Image = SetImage(14);
-            }
-
-            //クリックしたのはCardBox15
-            if (sender.Equals(this.CardBox15))
-            {
-                //カードの画像を表示
-                this.CardBox15.Image = SetImage(15);
-            }
-
-            //クリックしたのはCardBox16
-            if (sender.Equals(this.CardBox16))
-            {
-                //カードの画像を表示
-                this.CardBox16.Image = SetImage(16);
-            }
-
-            //クリックしたのはCardBox17か
-            if (sender.Equals(this.CardBox17))
-            {
-                //カードの画像を表示
-                this.CardBox17.Image = SetImage(17);
-            }
-
-            //クリックしたのはCardBox18
-            if (sender.Equals(this.CardBox18))
-            {
-                //カードの画像を表示
-                this.CardBox18.Image = SetImage(18);
-            }
-
-            //クリックしたのはCardBox19
-            if (sender.Equals(this.CardBox19))
-            {
-                //カードの画像を表示
-                this.CardBox19.Image = SetImage(19);
-            }
-
-            //クリックしたのはCardBo20か
-            if (sender.Equals(this.CardBox20))
-            {
-                //カードの画像を表示
-                this.CardBox20.Image = SetImage(20);
-            }
-
-            //クリックしたのはCardBox21
-            if (sender.Equals(this.CardBox21))
-            {
-                //カードの画像を表示
-                this.CardBox21.Image = SetImage(21);
-            }
-
-            //クリックしたのはCardBox22
-            if (sender.Equals(this.CardBox22))
-            {
-                //カードの画像を表示
-                this.CardBox22.Image = SetImage(22);
-            }
-
-            //クリックしたのはCardBox23か
-            if (sender.Equals(this.CardBox23))
-            {
-                //カードの画像を表示
-                this.CardBox23.Image = SetImage(23);
-            }
-
-            //クリックしたのはCardBox24
-            if (sender.Equals(this.CardBox24))
-            {
-                //カードの画像を表示
-                this.CardBox24.Image = SetImage(24);
-            }
-
-            //クリックしたのはCardBox25
-            if (sender.Equals(this.CardBox25))
-            {
-                //カードの画像を表示
-                this.CardBox25.Image = SetImage(25);
-            }
-
-            //クリックしたのはCardBox26
-            if (sender.Equals(this.CardBox26))
-            {
-                //カードの画像を表示
-                this.CardBox26.Image = SetImage(26);
-            }
-
-            //クリックしたのはCardBox27か
-            if (sender.Equals(this.CardBox27))
-            {
-                //カードの画像を表示
-                this.CardBox27.Image = SetImage(27);
-            }
-
-            //クリックしたのはCardBox28
-            if (sender.Equals(this.CardBox28))
-            {
-                //カードの画像を表示
-                this.CardBox28.Image = SetImage(28);
-            }
-
-            //クリックしたのはCardBox29
-            if (sender.Equals(this.CardBox29))
-            {
-                //カードの画像を表示
-                this.CardBox29.Image = SetImage(29);
-            }
-
-            //クリックしたのはCardBox30
-            if (sender.Equals(this.CardBox30))
-            {
-                //カードの画像を表示
-                this.CardBox30.Image = SetImage(30);
-            }
-
-            //クリックしたのはCardBox31
-            if (sender.Equals(this.CardBox31))
-            {
-                //カードの画像を表示
-                this.CardBox31.Image = SetImage(31);
-            }
-
-            //クリックしたのはCardBox32
-            if (sender.Equals(this.CardBox32))
-            {
-                //カードの画像を表示
-                this.CardBox32.Image = SetImage(32);
-            }
-
-            //クリックしたのはCardBo33か
-            if (sender.Equals(this.CardBox33))
-            {
-                //カードの画像を表示
-                this.CardBox33.Image = SetImage(33);
-            }
-
-            //クリックしたのはCardBox34
-            if (sender.Equals(this.CardBox34))
-            {
-                //カードの画像を表示
-                this.CardBox34.Image = SetImage(34);
-            }
-
-            //クリックしたのはCardBox35
-            if (sender.Equals(this.CardBox35))
-            {
-                //カードの画像を表示
-                this.CardBox35.Image = SetImage(35);
-            }
-
-            //クリックしたのはCardBox36か
-            if (sender.Equals(this.CardBox36))
-            {
-                //カードの画像を表示
-                this.CardBox36.Image = SetImage(36);
-            }
-
-            //クリックしたのはCardBox37
-            if (sender.Equals(this.CardBox37))
-            {
-                //カードの画像を表示
-                this.CardBox37.Image = SetImage(37);
-            }
-
-            //クリックしたのはCardBox38
-            if (sender.Equals(this.CardBox38))
-            {
-                //カードの画像を表示
-                this.CardBox38.Image = SetImage(38);
-            }
-
-            //クリックしたのはCardBo39
-            if (sender.Equals(this.CardBox39))
-            {
-                //カードの画像を表示
-                this.CardBox39.Image = SetImage(39);
-            }
-
-            //クリックしたのはCardBox40
-            if (sender.Equals(this.CardBox40))
-            {
-                //カードの画像を表示
-                this.CardBox40.Image = SetImage(40);
-            }
-
-            //クリックしたのはCardBox41
-            if (sender.Equals(this.CardBox41))
-            {
-                //カードの画像を表示
-                this.CardBox41.Image = SetImage(41);
-            }
-
-            //クリックしたのはCardBox42
-            if (sender.Equals(this.CardBox42))
-            {
-                //カードの画像を表示
-                this.CardBox42.Image = SetImage(42);
-            }
-
-            //クリックしたのはCardBox43か
-            if (sender.Equals(this.CardBox43))
-            {
-                //カードの画像を表示
-                this.CardBox43.Image = SetImage(43);
-            }
-
-            //クリックしたのはCardBox44
-            if (sender.Equals(this.CardBox44))
-            {
-                //カードの画像を表示
-                this.CardBox44.Image = SetImage(44);
-            }
-
-            //クリックしたのはCardBox45
-            if (sender.Equals(this.CardBox45))
-            {
-                //カードの画像を表示
-                this.CardBox45.Image = SetImage(45);
-            }
-
-            //クリックしたのはCardBo20か
-            if (sender.Equals(this.CardBox46))
-            {
-                //カードの画像を表示
-                this.CardBox46.Image = SetImage(46);
-            }
-
-            //クリックしたのはCardBox47
-            if (sender.Equals(this.CardBox47))
-            {
-                //カードの画像を表示
-                this.CardBox47.Image = SetImage(47);
-            }
-
-            //クリックしたのはCardBox48
-            if (sender.Equals(this.CardBox48))
-            {
-                //カードの画像を表示
-                this.CardBox48.Image = SetImage(48);
-            }
-
-            //クリックしたのはCardBox49か
-            if (sender.Equals(this.CardBox49))
-            {
-                //カードの画像を表示
-                this.CardBox49.Image = SetImage(49);
-            }
-
-            //クリックしたのはCardBox50
-            if (sender.Equals(this.CardBox50))
-            {
-                //カードの画像を表示
-                this.CardBox50.Image = SetImage(50);
-            }
-
-            //クリックしたのはCardBox51
-            if (sender.Equals(this.CardBox51))
-            {
-                //カードの画像を表示
-                this.CardBox51.Image = SetImage(51);
-            }
-
-            //クリックしたのはCardBox52
-            if (sender.Equals(this.CardBox52))
-            {
-                //カードの画像を表示
-                this.CardBox52.Image = SetImage(52);
             }
         }
+
+        /// <summary>
+        /// フォームをクリック関数
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FormMain_Click(object sender, EventArgs e)
+        {
+
+            //ヒットしたなら
+            if (drawFlag == true&&twoDrawFlag == true)
+            {
+                PlayBase();
+                drawFlag = false;
+                twoDrawFlag = false;
+            }
+            else
+            {
+                if (twoDrawFlag == true)
+                {
+                    ResetBasa();
+                    drawFlag = false;
+                    twoDrawFlag = false;
+                }
+            }
+
+        }
+
+
+        /// <summary>
+        /// カードを消す関数
+        /// </summary>
+        public void PlayBase()
+        {
+            //カウントを増やす
+            count.AddCount();
+
+            for (int i = 0; i < cardFlag.Length; i++)
+            {
+                //カードが表向きなら
+                if (cardFlag[i] == true)
+                {
+                    //画像を消す
+                    PictureArray[i].Visible = false;
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// カードをリセットする関数
+        /// </summary>
+        public void ResetBasa()
+        {
+            //手札リセット
+            player.Reset();
+
+            for (int i = 0; i < cardFlag.Length; i++)
+            {
+                //カードが表向きなら
+                if (cardFlag[i] == true)
+                {
+                    //裏向きにする
+                    cardFlag[i] = false;
+                    
+                    //画像を裏向き
+                    PictureArray[i].Image = SetImage(53);
+                }
+            }
+        }
+
 
         public Image SetImage(int s)
         {
@@ -564,5 +382,7 @@ namespace NervousBreakdown
             }
             return image;
         }
+
+    
     }
 }

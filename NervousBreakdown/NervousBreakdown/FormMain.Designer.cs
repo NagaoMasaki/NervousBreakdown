@@ -80,6 +80,7 @@
             this.CardBox29 = new System.Windows.Forms.PictureBox();
             this.CardBox28 = new System.Windows.Forms.PictureBox();
             this.CardBox27 = new System.Windows.Forms.PictureBox();
+            this.HitLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox3)).BeginInit();
@@ -656,11 +657,22 @@
             this.CardBox27.TabStop = false;
             this.CardBox27.Click += new System.EventHandler(this.Card_Click);
             // 
+            // HitLabel
+            // 
+            this.HitLabel.AutoSize = true;
+            this.HitLabel.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.HitLabel.Location = new System.Drawing.Point(747, 451);
+            this.HitLabel.Name = "HitLabel";
+            this.HitLabel.Size = new System.Drawing.Size(60, 21);
+            this.HitLabel.TabIndex = 52;
+            this.HitLabel.Text = "label1";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 536);
+            this.ClientSize = new System.Drawing.Size(915, 536);
+            this.Controls.Add(this.HitLabel);
             this.Controls.Add(this.CardBox52);
             this.Controls.Add(this.CardBox51);
             this.Controls.Add(this.CardBox50);
@@ -716,6 +728,7 @@
             this.Name = "FormMain";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormMain_Load);
+            this.Click += new System.EventHandler(this.FormMain_Click);
             ((System.ComponentModel.ISupportInitialize)(this.CardBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox3)).EndInit();
@@ -769,6 +782,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CardBox28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox27)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -826,6 +840,7 @@
         private System.Windows.Forms.PictureBox CardBox29;
         private System.Windows.Forms.PictureBox CardBox28;
         private System.Windows.Forms.PictureBox CardBox27;
+        private System.Windows.Forms.Label HitLabel;
     }
 }
 
