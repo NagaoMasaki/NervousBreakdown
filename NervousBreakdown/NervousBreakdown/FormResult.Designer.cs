@@ -30,6 +30,7 @@
         {
             this.label3 = new System.Windows.Forms.Label();
             this.TurnLabel = new System.Windows.Forms.Label();
+            this.CongratulationLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -37,7 +38,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label3.Location = new System.Drawing.Point(465, 228);
+            this.label3.Location = new System.Drawing.Point(464, 273);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 34);
             this.label3.TabIndex = 2;
@@ -49,18 +50,29 @@
             // 
             this.TurnLabel.AutoSize = true;
             this.TurnLabel.Font = new System.Drawing.Font("MS UI Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.TurnLabel.Location = new System.Drawing.Point(407, 222);
+            this.TurnLabel.Location = new System.Drawing.Point(406, 267);
             this.TurnLabel.Name = "TurnLabel";
             this.TurnLabel.Size = new System.Drawing.Size(37, 40);
             this.TurnLabel.TabIndex = 3;
             this.TurnLabel.Text = "0";
             this.TurnLabel.Click += new System.EventHandler(this.TurnLabel_Click);
             // 
+            // CongratulationLabel
+            // 
+            this.CongratulationLabel.AutoSize = true;
+            this.CongratulationLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.CongratulationLabel.Location = new System.Drawing.Point(276, 106);
+            this.CongratulationLabel.Name = "CongratulationLabel";
+            this.CongratulationLabel.Size = new System.Drawing.Size(540, 67);
+            this.CongratulationLabel.TabIndex = 4;
+            this.CongratulationLabel.Text = "congratulation!!";
+            // 
             // FormResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1031, 536);
+            this.Controls.Add(this.CongratulationLabel);
             this.Controls.Add(this.TurnLabel);
             this.Controls.Add(this.label3);
             this.Name = "FormResult";
@@ -74,5 +86,6 @@
         #endregion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label TurnLabel;
+        private System.Windows.Forms.Label CongratulationLabel;
     }
 }
