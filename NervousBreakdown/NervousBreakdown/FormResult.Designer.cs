@@ -28,52 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.TurnLabel = new System.Windows.Forms.Label();
-            this.CongratulationLabel = new System.Windows.Forms.Label();
+            this.ResultTextlabel = new System.Windows.Forms.Label();
+            this.TurnResultLabel = new System.Windows.Forms.Label();
+            this.WinResultLabel = new System.Windows.Forms.Label();
+            this.ExitResultLabel = new System.Windows.Forms.Label();
+            this.LoseResultLabel = new System.Windows.Forms.Label();
+            this.ScoreResultLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label3
+            // ResultTextlabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label3.Location = new System.Drawing.Point(464, 273);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(190, 34);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "ターンでクリア";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ResultTextlabel.AutoSize = true;
+            this.ResultTextlabel.Font = new System.Drawing.Font("MS UI Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ResultTextlabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ResultTextlabel.Location = new System.Drawing.Point(464, 273);
+            this.ResultTextlabel.Name = "ResultTextlabel";
+            this.ResultTextlabel.Size = new System.Drawing.Size(190, 34);
+            this.ResultTextlabel.TabIndex = 2;
+            this.ResultTextlabel.Text = "ターンでクリア";
+            this.ResultTextlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TurnLabel
+            // TurnResultLabel
             // 
-            this.TurnLabel.AutoSize = true;
-            this.TurnLabel.Font = new System.Drawing.Font("MS UI Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.TurnLabel.Location = new System.Drawing.Point(406, 267);
-            this.TurnLabel.Name = "TurnLabel";
-            this.TurnLabel.Size = new System.Drawing.Size(37, 40);
-            this.TurnLabel.TabIndex = 3;
-            this.TurnLabel.Text = "0";
-            this.TurnLabel.Click += new System.EventHandler(this.TurnLabel_Click);
+            this.TurnResultLabel.AutoSize = true;
+            this.TurnResultLabel.Font = new System.Drawing.Font("MS UI Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.TurnResultLabel.Location = new System.Drawing.Point(406, 267);
+            this.TurnResultLabel.Name = "TurnResultLabel";
+            this.TurnResultLabel.Size = new System.Drawing.Size(37, 40);
+            this.TurnResultLabel.TabIndex = 3;
+            this.TurnResultLabel.Text = "0";
+            this.TurnResultLabel.Click += new System.EventHandler(this.TurnLabel_Click);
             // 
-            // CongratulationLabel
+            // WinResultLabel
             // 
-            this.CongratulationLabel.AutoSize = true;
-            this.CongratulationLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.CongratulationLabel.Location = new System.Drawing.Point(276, 106);
-            this.CongratulationLabel.Name = "CongratulationLabel";
-            this.CongratulationLabel.Size = new System.Drawing.Size(540, 67);
-            this.CongratulationLabel.TabIndex = 4;
-            this.CongratulationLabel.Text = "congratulation!!";
+            this.WinResultLabel.AutoSize = true;
+            this.WinResultLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.WinResultLabel.Location = new System.Drawing.Point(276, 106);
+            this.WinResultLabel.Name = "WinResultLabel";
+            this.WinResultLabel.Size = new System.Drawing.Size(540, 67);
+            this.WinResultLabel.TabIndex = 4;
+            this.WinResultLabel.Text = "congratulation!!";
+            // 
+            // ExitResultLabel
+            // 
+            this.ExitResultLabel.AutoSize = true;
+            this.ExitResultLabel.Location = new System.Drawing.Point(917, 515);
+            this.ExitResultLabel.Name = "ExitResultLabel";
+            this.ExitResultLabel.Size = new System.Drawing.Size(102, 12);
+            this.ExitResultLabel.TabIndex = 5;
+            this.ExitResultLabel.Text = "画面をクリックで終了";
+            // 
+            // LoseResultLabel
+            // 
+            this.LoseResultLabel.AutoSize = true;
+            this.LoseResultLabel.Location = new System.Drawing.Point(190, 216);
+            this.LoseResultLabel.Name = "LoseResultLabel";
+            this.LoseResultLabel.Size = new System.Drawing.Size(101, 12);
+            this.LoseResultLabel.TabIndex = 6;
+            this.LoseResultLabel.Text = "(NPC、負けた時用）";
+            this.LoseResultLabel.Visible = false;
+            // 
+            // ScoreResultLabel
+            // 
+            this.ScoreResultLabel.AutoSize = true;
+            this.ScoreResultLabel.Location = new System.Drawing.Point(192, 243);
+            this.ScoreResultLabel.Name = "ScoreResultLabel";
+            this.ScoreResultLabel.Size = new System.Drawing.Size(166, 12);
+            this.ScoreResultLabel.TabIndex = 7;
+            this.ScoreResultLabel.Text = "(NPC、何枚獲得できたか表示用)";
+            this.ScoreResultLabel.Visible = false;
             // 
             // FormResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1031, 536);
-            this.Controls.Add(this.CongratulationLabel);
-            this.Controls.Add(this.TurnLabel);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.ScoreResultLabel);
+            this.Controls.Add(this.LoseResultLabel);
+            this.Controls.Add(this.ExitResultLabel);
+            this.Controls.Add(this.WinResultLabel);
+            this.Controls.Add(this.TurnResultLabel);
+            this.Controls.Add(this.ResultTextlabel);
             this.Name = "FormResult";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -82,8 +117,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label TurnLabel;
-        private System.Windows.Forms.Label CongratulationLabel;
+        private System.Windows.Forms.Label ResultTextlabel;
+        private System.Windows.Forms.Label TurnResultLabel;
+        private System.Windows.Forms.Label WinResultLabel;
+        private System.Windows.Forms.Label ExitResultLabel;
+        private System.Windows.Forms.Label LoseResultLabel;
+        private System.Windows.Forms.Label ScoreResultLabel;
     }
 }
