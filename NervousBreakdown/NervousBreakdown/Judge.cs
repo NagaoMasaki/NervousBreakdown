@@ -6,11 +6,20 @@ using System.Threading.Tasks;
 public class Judge
 {
     //2枚のカードを受け取る
-    //public int[] card=new int[2];
+    private int[] card = new int[2];
 
-    public bool Judgement(int[] Open)
+    public bool Judgement(bool p, int draw)
     {
-        if (Open[0] % 13 == Open[1] % 13)
+        switch (p)
+        {
+            //boolがfalseなら0に、trueなら1に入れる
+            case false: card[0] = draw; break;
+            case true: card[1] = draw; break;
+        }
+
+
+
+        if (card[0] % 13 == card[1] % 13 && p == true)
         {
             //2枚のカードの数値が同じなら成功
             return true;
