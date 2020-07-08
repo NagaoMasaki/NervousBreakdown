@@ -44,7 +44,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "ターンでクリア";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // TurnLabel
             // 
@@ -77,7 +76,6 @@
             this.Controls.Add(this.label3);
             this.Name = "FormResult";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.FormResult_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
