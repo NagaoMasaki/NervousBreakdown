@@ -15,7 +15,7 @@ namespace NervousBreakdown
 
 
         //FormMainから受け取る
-        public string text { get; set; }
+        public String text { get; set; }
 
         public FormResult()
         {
@@ -37,8 +37,14 @@ namespace NervousBreakdown
         //FormResult起動時
         private void FormResult_Load(object sender, EventArgs e)
         {
-            TurnLabel.Text = text;
+            TurnResultLabel.Text = text;
         }
+
+        //勝敗判定を受け取る(仮)
+        //public void JudgeResult(bool b)
+        //{
+
+        //}
 
     }
 }
