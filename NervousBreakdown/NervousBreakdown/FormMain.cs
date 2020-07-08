@@ -16,6 +16,7 @@ namespace NervousBreakdown
         Card card = new Card();
         Judge judge = new Judge();
         Count count = new Count();
+        FormResult formResult = new FormResult();
 
         private PictureBox[] PictureArray = new PictureBox[53];
 
@@ -25,6 +26,7 @@ namespace NervousBreakdown
         private bool[] cardFlag = new bool[53];
 
         bool j_hit = false;
+        private int drawCount = 0;
 
         public FormMain()
         {
@@ -156,10 +158,24 @@ namespace NervousBreakdown
             //二枚引いたならなら
             if (drawFlag == true && twoDrawFlag == true)
             {
+                drawCount++;
+
+                label1.Text = drawCount.ToString();
+
                 if (j_hit == true)
                 {
                     //同じ数字の時
                     PlayBase();
+
+                    int c = count.GetCount();
+
+                    if(c == 26)
+                    {
+                        //formResult.show();
+
+                        //終了
+                        this.Close();
+                    }
                 }
                 else
                 {
