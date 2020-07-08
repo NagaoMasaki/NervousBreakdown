@@ -36,10 +36,5 @@ namespace NervousBreakdown
             //TurnLabel.Text = text;
         //}
 
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

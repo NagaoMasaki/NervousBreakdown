@@ -37,31 +37,33 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label3.Location = new System.Drawing.Point(465, 228);
+            this.label3.Location = new System.Drawing.Point(620, 285);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(190, 34);
+            this.label3.Size = new System.Drawing.Size(232, 42);
             this.label3.TabIndex = 2;
             this.label3.Text = "ターンでクリア";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // TurnLabel
             // 
             this.TurnLabel.AutoSize = true;
             this.TurnLabel.Font = new System.Drawing.Font("MS UI Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.TurnLabel.Location = new System.Drawing.Point(407, 222);
+            this.TurnLabel.Location = new System.Drawing.Point(543, 278);
+            this.TurnLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TurnLabel.Name = "TurnLabel";
-            this.TurnLabel.Size = new System.Drawing.Size(37, 40);
+            this.TurnLabel.Size = new System.Drawing.Size(47, 50);
             this.TurnLabel.TabIndex = 3;
             this.TurnLabel.Text = "0";
             // 
             // FormResult
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 536);
+            this.ClientSize = new System.Drawing.Size(1375, 670);
             this.Controls.Add(this.TurnLabel);
             this.Controls.Add(this.label3);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormResult";
             this.Text = "Form1";
             this.ResumeLayout(false);
