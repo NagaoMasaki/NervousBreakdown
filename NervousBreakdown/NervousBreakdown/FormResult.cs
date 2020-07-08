@@ -12,8 +12,11 @@ namespace NervousBreakdown
 {
     public partial class FormResult : Form
     {
+        //カウント読み込み?
+        //Count count = new Count();
+
         //FormMainから受け取る
-        public string text { get; set; }
+        //public string text { get; set; }
 
         public FormResult()
         {
@@ -21,31 +24,17 @@ namespace NervousBreakdown
         }
 
         //FormResult起動時
-        private void FormResult_Load(object sender, EventArgs e)
-        {
+        //private void FormResult_Load(object sender, EventArgs e)
+        //{
+            //ターン数を受け取る
+            //count.GetCount();
+
             //TurnLabelに受け取ったターン数を表示
-            TurnLabel.Text = text;
-        }
+            //TurnLabel.Text = count.ToString();
 
-        private void FormResult_MouseClick(object sender, MouseEventArgs e)
-        {
-            Application.Exit();
-        }
+            //TurnLabelに受け取ったターン数を表示
+            //TurnLabel.Text = text;
+        //}
 
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TurnLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormResult_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
