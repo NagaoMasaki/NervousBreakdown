@@ -18,3 +18,4 @@ C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\o
 C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe.config
 C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe
 C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.pdb
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormResult.resources
