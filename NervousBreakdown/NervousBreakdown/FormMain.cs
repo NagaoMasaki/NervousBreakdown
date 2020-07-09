@@ -120,6 +120,18 @@ namespace NervousBreakdown
                         {
                             j_hit = judge.Judgement(drawFlag, card.decks[i]);
                             player.Select(drawFlag, card.decks[i]);
+
+                            //カードを一枚引いているなら
+                            if (drawFlag == true)
+                            {
+                                //二枚目を引いた判定にする
+                                twoDrawFlag = true;
+                            }
+                            else
+                            {
+                                //一枚目を引いた判定にする
+                                drawFlag = true;
+                            }
                         }
 
                         //引いた判定にする
@@ -127,18 +139,6 @@ namespace NervousBreakdown
                     }
                 }
 
-            }
-
-            //カードを一枚引いているなら
-            if (drawFlag == true)
-            {
-                //二枚目を引いた判定にする
-                twoDrawFlag = true;
-            }
-            else
-            {
-                //一枚目を引いた判定にする
-                drawFlag = true;
             }
 
             //デバック用
