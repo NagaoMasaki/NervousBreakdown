@@ -29,11 +29,6 @@ namespace NervousBreakdown
             Application.Exit();
         }
 
-        private void TurnLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         //FormResult起動時
         private void FormResult_Load(object sender, EventArgs e)
         {
@@ -45,6 +40,7 @@ namespace NervousBreakdown
         //{
 
         //}
+
 
     }
 }
