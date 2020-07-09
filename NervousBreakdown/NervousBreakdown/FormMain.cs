@@ -16,6 +16,7 @@ namespace NervousBreakdown
         Card card = new Card();
         Judge judge = new Judge();
         Count count = new Count();
+        FormResult formResult = new FormResult();
 
         private PictureBox[] PictureArray = new PictureBox[53];
 
@@ -23,6 +24,9 @@ namespace NervousBreakdown
         private bool twoDrawFlag = false;
 
         private bool[] cardFlag = new bool[53];
+
+        bool j_hit = false;
+        private int drawCount = 0;
 
         public FormMain()
         {
@@ -98,30 +102,33 @@ namespace NervousBreakdown
         /// <param name="e"></param>
         private void Card_Click(object sender, EventArgs e)
         {
-            bool hit = false;
+          
 
-            for(int i = 0; i < PictureArray.Length;i++)
+            if(drawFlag == false || twoDrawFlag == false)
             {
-                if (sender.Equals(PictureArray[i]))
+                for (int i = 0; i < PictureArray.Length; i++)
                 {
-                    //カードの画像を表示
-                    PictureArray[i].Image = SetImage(card.decks[i]);
-
-                    //カードが裏向きか
-                    if (cardFlag[i] == false)
+                    if (sender.Equals(PictureArray[i]))
                     {
-                        hit = judge.Judgement(drawFlag, card.decks[i]);
-                        player.Select(drawFlag, card.decks[i]);
-                    }
+                        //カードの画像を表示
+                        PictureArray[i].Image = SetImage(card.decks[i]);
 
-                    //引いた判定にする
-                    cardFlag[i] = true;
+                        //カードが裏向きか
+                        if (cardFlag[i] == false)
+                        {
+                            j_hit = judge.Judgement(drawFlag, card.decks[i]);
+                            player.Select(drawFlag, card.decks[i]);
+                        }
+
+                        //引いた判定にする
+                        cardFlag[i] = true;
+                    }
                 }
+
             }
 
-
             //カードを一枚引いているなら
-            if(drawFlag == true)
+            if (drawFlag == true)
             {
                 //二枚目を引いた判定にする
                 twoDrawFlag = true;
@@ -131,9 +138,6 @@ namespace NervousBreakdown
                 //一枚目を引いた判定にする
                 drawFlag = true;
             }
-
-           
-
 
             //デバック用
             {
@@ -151,24 +155,45 @@ namespace NervousBreakdown
         /// <param name="e"></param>
         private void FormMain_Click(object sender, EventArgs e)
         {
-
-            //ヒットしたなら
-            if (drawFlag == true&&twoDrawFlag == true)
+            //二枚引いたならなら
+            if (drawFlag == true && twoDrawFlag == true)
             {
-                PlayBase();
+                drawCount++;
+
+                label1.Text = drawCount.ToString();
+
+                if (j_hit == true)
+                {
+                    //同じ数字の時
+                    PlayBase();
+
+                    int c = count.GetCount();
+
+                    if(c == 26)
+                    {
+                        //formResult.show();
+
+                        //終了
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    //違う数字の時
+                    ResetBasa();
+                }
+
                 drawFlag = false;
                 twoDrawFlag = false;
-            }
-            else
-            {
-                if (twoDrawFlag == true)
+
+                //デバック用
                 {
-                    ResetBasa();
-                    drawFlag = false;
-                    twoDrawFlag = false;
+                    int a = count.GetCount();
+
+                    HitLabel.Text = a.ToString();
+
                 }
             }
-
         }
 
 
@@ -207,7 +232,7 @@ namespace NervousBreakdown
                 {
                     //裏向きにする
                     cardFlag[i] = false;
-                    
+
                     //画像を裏向き
                     PictureArray[i].Image = SetImage(53);
                 }
@@ -382,7 +407,5 @@ namespace NervousBreakdown
             }
             return image;
         }
-
-    
     }
 }

@@ -1,17 +1,8 @@
-﻿using System;
-
-//カウントクラス
+﻿//カウントクラス
 public class Count
 {
     private int count = 0;      //カウント
 
-
-    //コンストラクタ
-    //Count()
-    //{
-    //    //初期化
-    //    count = 0;
-    //}
 
     //カウントを増やす
     public void AddCount()
