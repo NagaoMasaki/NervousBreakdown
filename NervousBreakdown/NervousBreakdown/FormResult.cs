@@ -22,22 +22,16 @@ namespace NervousBreakdown
             InitializeComponent();
         }
 
-        //画面をクリックしたとき
-        private void FormResult_MouseClick(object sender, EventArgs e)
-        {
-            //アプリケーションを終了する
-            Application.Exit();
-        }
-
-        private void TurnLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         //FormResult起動時
         private void FormResult_Load(object sender, EventArgs e)
         {
             TurnResultLabel.Text = text;
+        }
+
+        private void FormResult_MouseClick(object sender, MouseEventArgs e)
+        {
+            //アプリケーションを終了する
+            Application.Exit();
         }
 
         //勝敗判定を受け取る(仮)

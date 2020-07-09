@@ -171,10 +171,12 @@ namespace NervousBreakdown
 
                     if(c == 26)
                     {
-                        //formResult.show();
+                        formResult.text = drawCount.ToString();
+                        formResult.Show();
 
                         //終了
-                        this.Close();
+                        //this.Close();
+                        this.Visible = false;
                     }
                 }
                 else

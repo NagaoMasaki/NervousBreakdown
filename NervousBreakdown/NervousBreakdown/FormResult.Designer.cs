@@ -57,7 +57,6 @@
             this.TurnResultLabel.Size = new System.Drawing.Size(37, 40);
             this.TurnResultLabel.TabIndex = 3;
             this.TurnResultLabel.Text = "0";
-            this.TurnResultLabel.Click += new System.EventHandler(this.TurnLabel_Click);
             // 
             // WinResultLabel
             // 
@@ -111,6 +110,8 @@
             this.Controls.Add(this.ResultTextlabel);
             this.Name = "FormResult";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormResult_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FormResult_MouseClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 
