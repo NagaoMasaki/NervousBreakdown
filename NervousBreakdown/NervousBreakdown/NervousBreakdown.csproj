@@ -47,12 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Card.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormResult.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,11 +62,10 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Judge.cs" />
+    <Compile Include="PlayerData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Ranking.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

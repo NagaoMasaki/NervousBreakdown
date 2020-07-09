@@ -23,17 +23,17 @@ namespace NervousBreakdown
             }
 
 
-            //int n = decks.Length;
+            int n = decks.Length;
 
-            ////山札に数字が全て入るまでループ
-            //while (n > 1)
-            //{
-            //    n--;
-            //    int k = rand.Next(n + 1);
-            //    int tmp = decks[k];
-            //    decks[k] = decks[n];
-            //    decks[n] = tmp;
-            //}
+            //山札に数字が全て入るまでループ
+            while (n > 1)
+            {
+                n--;
+                int k = rand.Next(n + 1);
+                int tmp = decks[k];
+                decks[k] = decks[n];
+                decks[n] = tmp;
+            }
         }
 
     }
