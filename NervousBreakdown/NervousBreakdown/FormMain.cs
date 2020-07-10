@@ -136,6 +136,8 @@ namespace NervousBreakdown
 
                         //引いた判定にする
                         cardFlag[i] = true;
+                        //CPUが覚える
+                        cpuMemory[i] = true;
                     }
                 }
 
