@@ -16,7 +16,7 @@ namespace NervousBreakdown
         public void Add(string name, int count)
         {
             //テキストに値を追加
-            File.AppendAllText(@"test.txt", name + "," + Convert.ToString(count) + Environment.NewLine);
+            File.AppendAllText(@"test.txt", name + "      " + ","  +Convert.ToString(count) + Environment.NewLine);
         }
 
 

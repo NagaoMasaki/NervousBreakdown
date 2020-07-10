@@ -30,3 +30,15 @@ C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj
 C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.CoreCompileInputs.cache
 C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.exe
 C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.pdb
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMain.resources
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormResult.resources
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormTitle.resources
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.Properties.Resources.resources
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.GenerateResource.cache
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.CoreCompileInputs.cache
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.exe
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.pdb
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe.config
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.pdb
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csprojAssemblyReference.cache
