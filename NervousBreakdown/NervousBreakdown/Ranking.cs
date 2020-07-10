@@ -16,7 +16,7 @@ namespace NervousBreakdown
         public void Add(string name, int count)
         {
             //テキストに値を追加
-            File.AppendAllText(@"test.txt", name + "      " + ","  +Convert.ToString(count) + Environment.NewLine);
+            File.AppendAllText(@"test.txt", name + " " + ","  +Convert.ToString(count) + Environment.NewLine);
         }
 
 
@@ -36,14 +36,7 @@ namespace NervousBreakdown
 
                     PlayerData playerData = new PlayerData();
                     playerData.Set(values[0], Convert.ToInt32(values[1]));
-                    playerDatas.Add(playerData);
-
-                    
-                    foreach (string list in lists)
-                    {
-                        
-                    }
-                   
+                    playerDatas.Add(playerData);                 
                 }
 
                 sr.Close();

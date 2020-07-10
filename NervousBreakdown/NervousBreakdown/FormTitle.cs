@@ -25,7 +25,7 @@ namespace NervousBreakdown
             formMain.nameText = NameBox.Text;
             //メイン開始
             formMain.Show();
-
+            formMain.formTitle = this;
             //タイトル終了
             this.Visible = false;
         }

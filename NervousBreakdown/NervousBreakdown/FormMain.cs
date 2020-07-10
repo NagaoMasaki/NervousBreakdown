@@ -28,6 +28,8 @@ namespace NervousBreakdown
         bool j_hit = false;
         private int drawCount = 0;
 
+        public FormTitle formTitle { get; set; }
+
         //FormTitleから受け取る
         public String nameText { get; set; }
 
@@ -177,9 +179,10 @@ namespace NervousBreakdown
 
                     if(c == 26)
                     {
-                        formResult.text = drawCount.ToString();
+                        formResult.text = nameText;
                         formResult.Show();
-
+                        formResult.GetCount(drawCount);
+                        formResult.GetFormMain(this);
                         //終了
                         //this.Close();
                         this.Visible = false;
@@ -414,6 +417,11 @@ namespace NervousBreakdown
                     break;
             }
             return image;
+        }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            formTitle.Close();
         }
     }
 }

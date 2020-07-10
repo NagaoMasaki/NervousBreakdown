@@ -17,12 +17,33 @@ namespace NervousBreakdown
         //カウント変数
         public int count = 0;
 
+        FormMain formMain;
+
+        public void GetFormMain(FormMain FormMain)
+        {
+            this.formMain = FormMain;
+        }
+
+        //カウント取得
+        public void GetCount(int cou)
+        {
+            this.count = cou;
+        }
+
         //FormMainから受け取る
         public String text { get; set; }
 
         public FormResult()
         {
             InitializeComponent();
+
+            
+        }
+
+        //FormResult起動時
+        private void FormResult_Load(object sender, EventArgs e)
+        {
+            TurnResultLabel.Text = count.ToString();
 
             //ランキングTextに追加
             ranking.Add(text, count);
@@ -39,18 +60,12 @@ namespace NervousBreakdown
         }
 
         //画面をクリックしたとき
-        private void FormResult_MouseClick(object sender, EventArgs e)
+        private void FormResult_MouseClick(object sender, MouseEventArgs e)
         {
+            formMain.Close();
+            this.Close();
             //アプリケーションを終了する
             Application.Exit();
-        }
-
-        //FormResult起動時
-        private void FormResult_Load(object sender, EventArgs e)
-        {
-            TurnResultLabel.Text = text;
-
-            
         }
 
 

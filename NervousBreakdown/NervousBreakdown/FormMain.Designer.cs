@@ -799,6 +799,7 @@
             this.Controls.Add(this.CardBox1);
             this.Name = "FormMain";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.Click += new System.EventHandler(this.FormMain_Click);
             ((System.ComponentModel.ISupportInitialize)(this.CardBox1)).EndInit();

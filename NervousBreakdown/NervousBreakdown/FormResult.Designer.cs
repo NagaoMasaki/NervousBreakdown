@@ -308,6 +308,7 @@
             this.Name = "FormResult";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormResult_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FormResult_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
