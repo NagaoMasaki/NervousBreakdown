@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace NervousBreakdown
 {
-    public partial class Form1 : Form
+    public partial class FormTitle : Form
     {
-        public Form1()
+        public FormTitle()
         {
             InitializeComponent();
-        }
-
-        private void box_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
