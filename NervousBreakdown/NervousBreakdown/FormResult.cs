@@ -12,10 +12,19 @@ namespace NervousBreakdown
 {
     public partial class FormResult : Form
     {
-
+        //ランキングオブジェクトの作成
+        public Ranking ranking = new Ranking();
+        //カウント変数
+        public int count = 0;
 
         //FormMainから受け取る
         public String text { get; set; }
+
+        //カウント取得
+        public void GetCount(int cou) 
+        {
+            this.count = cou;
+        }
 
         public FormResult()
         {
@@ -25,7 +34,17 @@ namespace NervousBreakdown
         //FormResult起動時
         private void FormResult_Load(object sender, EventArgs e)
         {
-            TurnResultLabel.Text = text;
+            ranking.Add(text, count);
+
+            //名前とカウントの情報を持つPlayerDataクラスのリストを作成
+            List<PlayerData> playerDatas = new List<PlayerData>();
+            //ランキングデータを読み込む
+            playerDatas = ranking.Read();
+            //リストからランキング情報を取り出す
+            foreach (PlayerData playerData in playerDatas)
+            {
+                playerData.GetName() + playerData.GetCount() + Environment.NewLine;
+            }
         }
 
         private void FormResult_MouseClick(object sender, MouseEventArgs e)
