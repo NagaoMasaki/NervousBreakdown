@@ -84,6 +84,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.NameLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox3)).BeginInit();
@@ -666,7 +668,7 @@
             this.HitLabel.AutoSize = true;
             this.HitLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.HitLabel.ForeColor = System.Drawing.Color.White;
-            this.HitLabel.Location = new System.Drawing.Point(259, 478);
+            this.HitLabel.Location = new System.Drawing.Point(528, 478);
             this.HitLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.HitLabel.Name = "HitLabel";
             this.HitLabel.Size = new System.Drawing.Size(22, 24);
@@ -693,21 +695,43 @@
             this.label2.Location = new System.Drawing.Point(694, 478);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 24);
+            this.label2.Size = new System.Drawing.Size(101, 24);
             this.label2.TabIndex = 54;
-            this.label2.Text = "ターン数";
+            this.label2.Text = "ターン数：";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(188, 478);
+            this.label3.Location = new System.Drawing.Point(440, 478);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 24);
+            this.label3.Size = new System.Drawing.Size(84, 24);
             this.label3.TabIndex = 55;
-            this.label3.Text = "ペア数";
+            this.label3.Text = "ペア数：";
+            // 
+            // NameLabel
+            // 
+            this.NameLabel.AutoSize = true;
+            this.NameLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.NameLabel.ForeColor = System.Drawing.Color.White;
+            this.NameLabel.Location = new System.Drawing.Point(210, 478);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(122, 24);
+            this.NameLabel.TabIndex = 56;
+            this.NameLabel.Text = "○○　○○";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(138, 478);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 24);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "名前：";
             // 
             // FormMain
             // 
@@ -715,6 +739,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(1015, 536);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -890,6 +916,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label NameLabel;
+        private System.Windows.Forms.Label label4;
     }
 }
 

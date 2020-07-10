@@ -30,3 +30,4 @@ C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj
 C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.CoreCompileInputs.cache
 C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.exe
 C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.pdb
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormTitle.resources

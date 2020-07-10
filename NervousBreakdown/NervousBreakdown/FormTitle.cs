@@ -12,19 +12,22 @@ namespace NervousBreakdown
 {
     public partial class FormTitle : Form
     {
+        FormMain formMain = new FormMain();
+
         public FormTitle()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void OnePlayButton_Click(object sender, EventArgs e)
         {
+            //メインの名前用Textに代入
+            formMain.nameText = NameBox.Text;
+            //メイン開始
+            formMain.Show();
 
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            //タイトル終了
+            this.Visible = false;
         }
     }
 }

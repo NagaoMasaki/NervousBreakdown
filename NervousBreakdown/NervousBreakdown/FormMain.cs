@@ -28,6 +28,9 @@ namespace NervousBreakdown
         bool j_hit = false;
         private int drawCount = 0;
 
+        //FormTitleから受け取る
+        public String nameText { get; set; }
+
         public FormMain()
         {
             InitializeComponent();
@@ -35,6 +38,9 @@ namespace NervousBreakdown
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            //デバック用
+            this.NameLabel.Text = nameText;
+
             //デッキをシャッフルする
             card.CardMark();
 
