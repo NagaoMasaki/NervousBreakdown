@@ -57,6 +57,8 @@ namespace NervousBreakdown
             {
                 RankLabel.Text += playerData.GetName() + playerData.GetCount() + Environment.NewLine;
             }
+
+
         }
 
         //画面をクリックしたとき
