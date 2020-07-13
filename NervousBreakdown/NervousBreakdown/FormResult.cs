@@ -15,7 +15,7 @@ namespace NervousBreakdown
         //ランキングオブジェクトの作成
         public Ranking ranking = new Ranking();
         //カウント変数
-        public int count = 0;
+        //private int count;
 
         FormMain formMain;
 
@@ -27,12 +27,12 @@ namespace NervousBreakdown
         //カウント取得
         public void GetCount(int cou)
         {
-            this.count = cou;
+            //this.count = cou;
         }
 
         //FormMainから受け取る
         public String text { get; set; }
-
+        public int count { get; set; }
         public FormResult()
         {
             InitializeComponent();
@@ -43,8 +43,6 @@ namespace NervousBreakdown
         //FormResult起動時
         private void FormResult_Load(object sender, EventArgs e)
         {
-            TurnResultLabel.Text = count.ToString();
-
             //ランキングTextに追加
             ranking.Add(text, count);
 
@@ -53,12 +51,41 @@ namespace NervousBreakdown
             //ランキングデータを読み込む
             playerDatas = ranking.Read();
             //リストからランキング情報を取り出す
-            foreach (PlayerData playerData in playerDatas)
+            label11.Text = playerDatas[0].GetName();
+            label16.Text = playerDatas[0].GetCount().ToString();
+
+            if (playerDatas[1].GetName() != null)
             {
-                RankLabel.Text += playerData.GetName() + playerData.GetCount() + Environment.NewLine;
+                label12.Text = playerDatas[1].GetName();
+                label17.Text = playerDatas[1].GetCount().ToString();
             }
 
+            if (playerDatas[2].GetName() != null)
+            {
+                label13.Text = playerDatas[2].GetName();
+                label18.Text = playerDatas[2].GetCount().ToString();
+            }
 
+            if (playerDatas[3].GetName() != null)
+            {
+                label14.Text = playerDatas[3].GetName();
+                label19.Text = playerDatas[3].GetCount().ToString();
+            }
+
+            if (playerDatas[4].GetName() != null)
+            {
+                label15.Text = playerDatas[4].GetName();
+                label20.Text = playerDatas[4].GetCount().ToString();
+            }
+
+            TurnResultLabel.Text = count.ToString();
+
+           
+
+            //foreach (PlayerData playerData in playerDatas)
+            //{
+            //    RankLabel.Text += playerData.GetName() + playerData.GetCount() + Environment.NewLine;
+            //}
         }
 
         //画面をクリックしたとき
