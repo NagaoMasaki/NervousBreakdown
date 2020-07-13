@@ -23,6 +23,8 @@ namespace NervousBreakdown
         private bool drawFlag = false;
         private bool twoDrawFlag = false;
 
+        private bool[] cpuMemory = new bool[53];
+
         private bool[] cardFlag = new bool[53];
 
         bool j_hit = false;
@@ -142,6 +144,8 @@ namespace NervousBreakdown
 
                         //引いた判定にする
                         cardFlag[i] = true;
+                        //CPUが覚える
+                        cpuMemory[i] = true;
                     }
                 }
 
@@ -223,6 +227,8 @@ namespace NervousBreakdown
                 {
                     //画像を消す
                     PictureArray[i].Visible = false;
+                    //CPUが忘れる
+                    cpuMemory[i]= false;
                 }
             }
         }
