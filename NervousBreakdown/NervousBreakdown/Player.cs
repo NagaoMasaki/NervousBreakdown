@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,16 +36,12 @@ namespace NervousBreakdown
             open[1] = 0;
         }
         
-        public void Cpu(bool[] cpuMemory)
+        public void Cpu(bool[] cpuMemory,int[] decks)
         {
-            for (int i = 0; i < 2; i++)
-            {
-                if (i == 0)
-                {
-                    Random random = new Random();
-                    //カードを引く
-                    int cpuCard = random.Next(0, 51);
-                    //引いたカードかどうかチェック
+            Random random = new Random();
+            //カードを引く
+            int cpuCard = random.Next(0, 51);
+            //引いたカードかどうかチェック
                     bool drawn = drawnCard;
                     //まだ引いてないカードが出るまで引く
                     while (drawn)
@@ -52,29 +49,40 @@ namespace NervousBreakdown
                         cpuCard = random.Next(0, 51);
                         drawn = drawnCard;
                     }
-                    //引いたカードを格納
-                    open[0] = cpuCard;
-                }
-                //一枚目に引いたカードが覚えてる数値と同じなら
-                else if (i == 1 && cpuMemory[open[0]] == true)
+                    //ランダムな配列を探す
+                    for (i = 0; i < 52; i++)
+                    {
+                        if (decks[i] == cpuCard)
+                        {
+                            //引いたカードを格納
+                            open[0] = decks[i];
+                            cpuMemory[i] = true;
+                        }
+                    }
+
+            //一枚目に引いたカードが覚えてる数値と同じなら
+            for (int j = 0; j < 52; j++)
+            {
+                if (cpuMemory[j] = true && decks[j] % 13 == open[0] % 13)
                 {
-                    //open[1] = ;
+                    open[1] = decks[j];
                 }
                 else
                 {
+
                     Random random = new Random();
                     //カードを引く
-                    int cpuCard = random.Next(0, 51);
+                    int cpuCard2= random.Next(0, 51);
                     //引いたカードかどうかチェック
                     bool drawn = drawnCard;
                     //まだ引いてないカードが出るまで引く
                     while (drawn)
                     {
-                        cpuCard = random.Next(0, 51);
+                        cpuCard2= random.Next(0, 51);
                         drawn = drawnCard;
                     }
                     //引いたカードを格納
-                    open[1] = cpuCard;
+                    open[1] = cpuCard2;
                 }
             }
         }
