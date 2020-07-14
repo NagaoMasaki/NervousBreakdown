@@ -17,7 +17,7 @@ namespace NervousBreakdown
         Judge judge = new Judge();
         Count count = new Count();
         FormResult formResult = new FormResult();
-
+        
         //画像
         private PictureBox[] PictureArray = new PictureBox[52];
 
@@ -46,6 +46,8 @@ namespace NervousBreakdown
         //FormTitleから受け取る
         public String nameText { get; set; }
 
+        //FormTitleから先攻後攻を受け取る true=先攻
+        public bool firstORSecond { get; set; }
 
         public FormMainNPC()
         {
@@ -111,6 +113,15 @@ namespace NervousBreakdown
             PictureArray[50] = this.CardBox51;
             PictureArray[51] = this.CardBox52;
 
+            //NPCが先攻か後攻か
+            npcTurn = !firstORSecond;
+
+            //ターン中ループ
+            while (npcTurn == true)
+            {
+                //NPCに切り替え
+                NpcMove();
+            }
         }
 
         /// <summary>
@@ -193,14 +204,15 @@ namespace NervousBreakdown
                     {
                         //リザルトに入力した名前を入れる
                         formResult.text = nameText;
-                        //リザルトの表示
-                        formResult.Show();
                         //
                         formResult.GetCount(drawCount);
                         //
                         formResult.GetFormMainNPC(this);
                         //メインの終了
                         this.Visible = false;
+                        //リザルトの表示
+                        formResult.Show();
+                       
                     }
                 }
                 else
@@ -262,6 +274,7 @@ namespace NervousBreakdown
                     cardFlag[i] = false;
                     // 裏向きにする
                     PictureArray[i].Image = SetImage(53);
+                    PictureArray[i].Refresh();
                     cpuMemory[i] = false;
                 }
             }            
@@ -296,7 +309,7 @@ namespace NervousBreakdown
 
                 //カードの画像を表示
                 PictureArray[num].Image = SetImage(card.decks[num]);
-
+                PictureArray[num].Refresh();
                 //ジャッジクラスで判定
                 j_hit = judge.Judgement(drawFlag, card.decks[num]);
 
@@ -347,7 +360,9 @@ namespace NervousBreakdown
         /// <param name="e"></param>
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
+            formResult.Close();
             formTitle.Close();
+            Application.Exit();
         }
 
         /// <summary>

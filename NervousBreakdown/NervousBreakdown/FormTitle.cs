@@ -12,7 +12,7 @@ namespace NervousBreakdown
 {
     public partial class FormTitle : Form
     {
-        FormMain formMain = new FormMain();
+        
 
         //CPUのボタンを押したかどうかのフラグ
         private bool cpuButtonFlag = false;
@@ -26,6 +26,7 @@ namespace NervousBreakdown
         {
             if(!cpuButtonFlag)
             {
+                FormMain formMain = new FormMain();
                 //メインの名前用Textに代入
                 formMain.nameText = NameBox.Text;
                 //titleを終了させるためにmainに代入する
@@ -36,7 +37,22 @@ namespace NervousBreakdown
                 //メイン開始
                 formMain.Show();
             }
-            
+            else
+            {
+                //先攻
+                //formMainNPCの作成
+                FormMainNPC formMainNPC = new FormMainNPC();
+                //メインの名前用Textに代入
+                formMainNPC.nameText = NameBox.Text;
+                //titleを終了させるためにmainに代入する
+                formMainNPC.formTitle = this;
+                //先攻を代入
+                formMainNPC.firstORSecond = true;
+                //タイトル終了
+                this.Visible = false;
+                //メインNPC開始
+                formMainNPC.Show();
+            }
             
             
         }
@@ -54,7 +70,18 @@ namespace NervousBreakdown
             else
             {
                 //後攻
-
+                //formMainNPCの作成
+                FormMainNPC formMainNPC = new FormMainNPC();
+                //メインの名前用Textに代入
+                formMainNPC.nameText = NameBox.Text;
+                //titleを終了させるためにmainに代入する
+                formMainNPC.formTitle = this;
+                //後攻を代入
+                formMainNPC.firstORSecond = false;
+                //タイトル終了
+                this.Visible = false;
+                //メインNPC開始
+                formMainNPC.Show();
 
             }
         }
