@@ -16,7 +16,7 @@ namespace NervousBreakdown
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTitle());
+            Application.Run(new FormMainNPC());
         }
     }
 }

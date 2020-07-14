@@ -19,9 +19,16 @@ namespace NervousBreakdown
 
         FormMain formMain;
 
+        FormMainNPC formMainNPC;
+
         public void GetFormMain(FormMain FormMain)
         {
             this.formMain = FormMain;
+        }
+
+        public void GetFormMainNPC(FormMainNPC FormMainNPC)
+        {
+            this.formMainNPC = FormMainNPC;
         }
 
         //カウント取得
