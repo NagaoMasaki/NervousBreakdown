@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Timers;
 
 namespace NervousBreakdown
 {
@@ -15,9 +16,8 @@ namespace NervousBreakdown
         Player player = new Player();
         Card card = new Card();
         Judge judge = new Judge();
-        Count count = new Count();
         FormResult formResult = new FormResult();
-        
+
         //画像
         private PictureBox[] PictureArray = new PictureBox[52];
 
@@ -38,8 +38,11 @@ namespace NervousBreakdown
         //NPCのターン判定
         bool npcTurn = false;
 
-        //現在の引いた数
-        private int drawCount = 0;
+        //プレイヤーの得点
+        private int playerPoint = 0;
+
+        //NPCの得点
+        private int npcPoint = 0;
 
         public FormTitle formTitle { get; set; }
 
@@ -56,6 +59,9 @@ namespace NervousBreakdown
 
         private void FormMainNPC_Load(object sender, EventArgs e)
         {
+            //名前のラベルに入力した名前を代入
+            this.NameLabel.Text = nameText;
+
             //デッキをシャッフルする
             card.CardMark();
 
@@ -116,7 +122,7 @@ namespace NervousBreakdown
             //NPCが先攻か後攻か
             npcTurn = !firstORSecond;
 
-            //ターン中ループ
+            //NPCのターン中ループ
             while (npcTurn == true)
             {
                 //NPCに切り替え
@@ -184,43 +190,37 @@ namespace NervousBreakdown
             //二枚引いたならなら
             if (drawFlag == true && twoDrawFlag == true)
             {
-                //引いたカウントアップ
-                drawCount++;
-
-                //画面に表示
-                //label1.Text = drawCount.ToString();
-
+                
                 //成功したか
                 if (j_hit == true)
                 {
                     //同じ数字の時
-                    PlayBase();
+                    GetPoint();
 
-                    //代入
-                    int c = count.GetCount();
+                    //プレイヤーとNPCの合計のポイントを持つ変数
+                    int sum = playerPoint + npcPoint;
 
                     //26ペアそろったか？
-                    if (c == 26)
+                    if (sum == 26)
                     {
                         //リザルトに入力した名前を入れる
                         formResult.text = nameText;
-                        //
-                        formResult.GetCount(drawCount);
-                        //
-                        formResult.GetFormMainNPC(this);
+ 
                         //メインの終了
                         this.Visible = false;
                         //リザルトの表示
-                        formResult.Show();
+
                        
                     }
                 }
                 else
                 {
                     //違う数字の時
-                    ResetBasa();
+                    ResetCard();
 
+                    //NPCのターンにする
                     npcTurn = true;
+                    NPCTimer.Enabled = true;
                 }
 
                 //引いた判定をリセット
@@ -228,8 +228,8 @@ namespace NervousBreakdown
                 twoDrawFlag = false;
             }
 
-            //ターン中ループ
-            while(npcTurn == true)
+            //NPCのターン中ループ
+            while (npcTurn == true)
             {
                 //NPCに切り替え
                 NpcMove();
@@ -237,13 +237,29 @@ namespace NervousBreakdown
         }
 
         /// <summary>
-        /// カードを消す関数
+        /// 得点の追加をしてカードを消す関数
         /// </summary>
-        public void PlayBase()
+        public void GetPoint()
         {
-            //カウントを増やす
-            count.AddCount();
+            //現在どちらのターンか
+            if(npcTurn == false)
+            {
+                //プレイヤーのターン
+                //プレイヤーに得点の追加
+                playerPoint++;
 
+                //画面にポイントの表示をする
+                this.playerPointLabel.Text = playerPoint.ToString();
+            }
+            else
+            {
+                //NPCのターン
+                //NPCに得点の追加
+                npcPoint++;
+
+                //画面にポイントの表示をする
+                this.NPCPointLabel.Text = npcPoint.ToString();
+            }
 
             for (int i = 0; i < cardFlag.Length; i++)
             {
@@ -262,7 +278,7 @@ namespace NervousBreakdown
         /// <summary>
         /// 表向きのカードをリセットする関数
         /// </summary>
-        public void ResetBasa()
+        public void ResetCard()
         {
             //手札リセット
             player.Reset();
@@ -336,15 +352,16 @@ namespace NervousBreakdown
                 if (j_hit == true)
                 {
                     //同じ数字の時
-                    PlayBase();
+                    GetPoint();
                 }
                 else
                 {
                     //違う数字の時
-                    ResetBasa();
+                    ResetCard();
 
                     //ターン終了
                     npcTurn = false;
+                    NPCTimer.Enabled = false;
                 }
 
                 //引いた判定をリセット
@@ -356,8 +373,6 @@ namespace NervousBreakdown
         /// <summary>
         /// タイトルを消す関数
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             formResult.Close();
@@ -366,10 +381,16 @@ namespace NervousBreakdown
         }
 
         /// <summary>
+        /// タイマー関数
+        /// </summary>
+        private void NPCTimer_Tick(object sender, EventArgs e)
+        {
+   
+        }
+
+        /// <summary>
         /// 引数から画像を見つける関数
         /// </summary>
-        /// <param name="s"></param>
-        /// <returns></returns>
         public Image SetImage(int s)
         {
             Image image = NervousBreakdown.Properties.Resources.card;
@@ -538,6 +559,6 @@ namespace NervousBreakdown
             return image;
         }
 
-
+ 
     }
 }

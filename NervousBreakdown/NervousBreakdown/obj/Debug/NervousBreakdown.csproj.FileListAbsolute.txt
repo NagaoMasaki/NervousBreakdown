@@ -7,7 +7,6 @@ C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug
 C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.CoreCompileInputs.cache
 C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.exe
 C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.pdb
-C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csprojAssemblyReference.cache
 C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csprojAssemblyReference.cache
 C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMain.resources
 C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormResult.resources

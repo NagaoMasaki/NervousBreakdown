@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.CardBox52 = new System.Windows.Forms.PictureBox();
             this.CardBox51 = new System.Windows.Forms.PictureBox();
             this.CardBox50 = new System.Windows.Forms.PictureBox();
@@ -80,6 +81,14 @@
             this.CardBox3 = new System.Windows.Forms.PictureBox();
             this.CardBox2 = new System.Windows.Forms.PictureBox();
             this.CardBox1 = new System.Windows.Forms.PictureBox();
+            this.playerPointLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.NameLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.NPCPointLabel = new System.Windows.Forms.Label();
+            this.NPCTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.CardBox52)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox51)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox50)).BeginInit();
@@ -137,7 +146,7 @@
             // CardBox52
             // 
             this.CardBox52.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox52.Location = new System.Drawing.Point(865, 374);
+            this.CardBox52.Location = new System.Drawing.Point(865, 317);
             this.CardBox52.Name = "CardBox52";
             this.CardBox52.Size = new System.Drawing.Size(60, 90);
             this.CardBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -148,7 +157,7 @@
             // CardBox51
             // 
             this.CardBox51.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox51.Location = new System.Drawing.Point(799, 374);
+            this.CardBox51.Location = new System.Drawing.Point(799, 317);
             this.CardBox51.Name = "CardBox51";
             this.CardBox51.Size = new System.Drawing.Size(60, 90);
             this.CardBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -159,7 +168,7 @@
             // CardBox50
             // 
             this.CardBox50.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox50.Location = new System.Drawing.Point(733, 374);
+            this.CardBox50.Location = new System.Drawing.Point(733, 317);
             this.CardBox50.Name = "CardBox50";
             this.CardBox50.Size = new System.Drawing.Size(60, 90);
             this.CardBox50.TabIndex = 101;
@@ -169,7 +178,7 @@
             // CardBox49
             // 
             this.CardBox49.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox49.Location = new System.Drawing.Point(667, 374);
+            this.CardBox49.Location = new System.Drawing.Point(667, 317);
             this.CardBox49.Name = "CardBox49";
             this.CardBox49.Size = new System.Drawing.Size(60, 90);
             this.CardBox49.TabIndex = 100;
@@ -179,7 +188,7 @@
             // CardBox48
             // 
             this.CardBox48.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox48.Location = new System.Drawing.Point(601, 374);
+            this.CardBox48.Location = new System.Drawing.Point(601, 317);
             this.CardBox48.Name = "CardBox48";
             this.CardBox48.Size = new System.Drawing.Size(60, 90);
             this.CardBox48.TabIndex = 99;
@@ -189,7 +198,7 @@
             // CardBox47
             // 
             this.CardBox47.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox47.Location = new System.Drawing.Point(535, 374);
+            this.CardBox47.Location = new System.Drawing.Point(535, 317);
             this.CardBox47.Name = "CardBox47";
             this.CardBox47.Size = new System.Drawing.Size(60, 90);
             this.CardBox47.TabIndex = 98;
@@ -199,7 +208,7 @@
             // CardBox46
             // 
             this.CardBox46.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox46.Location = new System.Drawing.Point(469, 374);
+            this.CardBox46.Location = new System.Drawing.Point(469, 317);
             this.CardBox46.Name = "CardBox46";
             this.CardBox46.Size = new System.Drawing.Size(60, 90);
             this.CardBox46.TabIndex = 97;
@@ -209,7 +218,7 @@
             // CardBox45
             // 
             this.CardBox45.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox45.Location = new System.Drawing.Point(403, 374);
+            this.CardBox45.Location = new System.Drawing.Point(403, 317);
             this.CardBox45.Name = "CardBox45";
             this.CardBox45.Size = new System.Drawing.Size(60, 90);
             this.CardBox45.TabIndex = 96;
@@ -219,7 +228,7 @@
             // CardBox44
             // 
             this.CardBox44.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox44.Location = new System.Drawing.Point(337, 374);
+            this.CardBox44.Location = new System.Drawing.Point(337, 317);
             this.CardBox44.Name = "CardBox44";
             this.CardBox44.Size = new System.Drawing.Size(60, 90);
             this.CardBox44.TabIndex = 95;
@@ -229,7 +238,7 @@
             // CardBox43
             // 
             this.CardBox43.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox43.Location = new System.Drawing.Point(271, 374);
+            this.CardBox43.Location = new System.Drawing.Point(271, 317);
             this.CardBox43.Name = "CardBox43";
             this.CardBox43.Size = new System.Drawing.Size(60, 90);
             this.CardBox43.TabIndex = 94;
@@ -239,7 +248,7 @@
             // CardBox42
             // 
             this.CardBox42.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox42.Location = new System.Drawing.Point(205, 374);
+            this.CardBox42.Location = new System.Drawing.Point(205, 317);
             this.CardBox42.Name = "CardBox42";
             this.CardBox42.Size = new System.Drawing.Size(60, 90);
             this.CardBox42.TabIndex = 93;
@@ -249,7 +258,7 @@
             // CardBox41
             // 
             this.CardBox41.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox41.Location = new System.Drawing.Point(139, 374);
+            this.CardBox41.Location = new System.Drawing.Point(139, 317);
             this.CardBox41.Name = "CardBox41";
             this.CardBox41.Size = new System.Drawing.Size(60, 90);
             this.CardBox41.TabIndex = 92;
@@ -259,7 +268,7 @@
             // CardBox40
             // 
             this.CardBox40.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox40.Location = new System.Drawing.Point(73, 374);
+            this.CardBox40.Location = new System.Drawing.Point(73, 317);
             this.CardBox40.Name = "CardBox40";
             this.CardBox40.Size = new System.Drawing.Size(60, 90);
             this.CardBox40.TabIndex = 91;
@@ -269,7 +278,7 @@
             // CardBox39
             // 
             this.CardBox39.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox39.Location = new System.Drawing.Point(865, 278);
+            this.CardBox39.Location = new System.Drawing.Point(865, 221);
             this.CardBox39.Name = "CardBox39";
             this.CardBox39.Size = new System.Drawing.Size(60, 90);
             this.CardBox39.TabIndex = 90;
@@ -279,7 +288,7 @@
             // CardBox38
             // 
             this.CardBox38.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox38.Location = new System.Drawing.Point(799, 278);
+            this.CardBox38.Location = new System.Drawing.Point(799, 221);
             this.CardBox38.Name = "CardBox38";
             this.CardBox38.Size = new System.Drawing.Size(60, 90);
             this.CardBox38.TabIndex = 89;
@@ -289,7 +298,7 @@
             // CardBox37
             // 
             this.CardBox37.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox37.Location = new System.Drawing.Point(733, 278);
+            this.CardBox37.Location = new System.Drawing.Point(733, 221);
             this.CardBox37.Name = "CardBox37";
             this.CardBox37.Size = new System.Drawing.Size(60, 90);
             this.CardBox37.TabIndex = 88;
@@ -299,7 +308,7 @@
             // CardBox36
             // 
             this.CardBox36.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox36.Location = new System.Drawing.Point(667, 278);
+            this.CardBox36.Location = new System.Drawing.Point(667, 221);
             this.CardBox36.Name = "CardBox36";
             this.CardBox36.Size = new System.Drawing.Size(60, 90);
             this.CardBox36.TabIndex = 87;
@@ -309,7 +318,7 @@
             // CardBox35
             // 
             this.CardBox35.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox35.Location = new System.Drawing.Point(601, 278);
+            this.CardBox35.Location = new System.Drawing.Point(601, 221);
             this.CardBox35.Name = "CardBox35";
             this.CardBox35.Size = new System.Drawing.Size(60, 90);
             this.CardBox35.TabIndex = 86;
@@ -319,7 +328,7 @@
             // CardBox34
             // 
             this.CardBox34.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox34.Location = new System.Drawing.Point(535, 278);
+            this.CardBox34.Location = new System.Drawing.Point(535, 221);
             this.CardBox34.Name = "CardBox34";
             this.CardBox34.Size = new System.Drawing.Size(60, 90);
             this.CardBox34.TabIndex = 85;
@@ -329,7 +338,7 @@
             // CardBox33
             // 
             this.CardBox33.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox33.Location = new System.Drawing.Point(469, 278);
+            this.CardBox33.Location = new System.Drawing.Point(469, 221);
             this.CardBox33.Name = "CardBox33";
             this.CardBox33.Size = new System.Drawing.Size(60, 90);
             this.CardBox33.TabIndex = 84;
@@ -339,7 +348,7 @@
             // CardBox32
             // 
             this.CardBox32.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox32.Location = new System.Drawing.Point(403, 278);
+            this.CardBox32.Location = new System.Drawing.Point(403, 221);
             this.CardBox32.Name = "CardBox32";
             this.CardBox32.Size = new System.Drawing.Size(60, 90);
             this.CardBox32.TabIndex = 83;
@@ -349,7 +358,7 @@
             // CardBox31
             // 
             this.CardBox31.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox31.Location = new System.Drawing.Point(337, 278);
+            this.CardBox31.Location = new System.Drawing.Point(337, 221);
             this.CardBox31.Name = "CardBox31";
             this.CardBox31.Size = new System.Drawing.Size(60, 90);
             this.CardBox31.TabIndex = 82;
@@ -359,7 +368,7 @@
             // CardBox30
             // 
             this.CardBox30.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox30.Location = new System.Drawing.Point(271, 278);
+            this.CardBox30.Location = new System.Drawing.Point(271, 221);
             this.CardBox30.Name = "CardBox30";
             this.CardBox30.Size = new System.Drawing.Size(60, 90);
             this.CardBox30.TabIndex = 81;
@@ -369,7 +378,7 @@
             // CardBox29
             // 
             this.CardBox29.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox29.Location = new System.Drawing.Point(205, 278);
+            this.CardBox29.Location = new System.Drawing.Point(205, 221);
             this.CardBox29.Name = "CardBox29";
             this.CardBox29.Size = new System.Drawing.Size(60, 90);
             this.CardBox29.TabIndex = 80;
@@ -379,7 +388,7 @@
             // CardBox28
             // 
             this.CardBox28.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox28.Location = new System.Drawing.Point(139, 278);
+            this.CardBox28.Location = new System.Drawing.Point(139, 221);
             this.CardBox28.Name = "CardBox28";
             this.CardBox28.Size = new System.Drawing.Size(60, 90);
             this.CardBox28.TabIndex = 79;
@@ -389,7 +398,7 @@
             // CardBox27
             // 
             this.CardBox27.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox27.Location = new System.Drawing.Point(73, 278);
+            this.CardBox27.Location = new System.Drawing.Point(73, 221);
             this.CardBox27.Name = "CardBox27";
             this.CardBox27.Size = new System.Drawing.Size(60, 90);
             this.CardBox27.TabIndex = 78;
@@ -399,7 +408,7 @@
             // CardBox26
             // 
             this.CardBox26.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox26.Location = new System.Drawing.Point(865, 182);
+            this.CardBox26.Location = new System.Drawing.Point(865, 125);
             this.CardBox26.Name = "CardBox26";
             this.CardBox26.Size = new System.Drawing.Size(60, 90);
             this.CardBox26.TabIndex = 77;
@@ -409,7 +418,7 @@
             // CardBox25
             // 
             this.CardBox25.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox25.Location = new System.Drawing.Point(799, 182);
+            this.CardBox25.Location = new System.Drawing.Point(799, 125);
             this.CardBox25.Name = "CardBox25";
             this.CardBox25.Size = new System.Drawing.Size(60, 90);
             this.CardBox25.TabIndex = 76;
@@ -419,7 +428,7 @@
             // CardBox24
             // 
             this.CardBox24.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox24.Location = new System.Drawing.Point(733, 182);
+            this.CardBox24.Location = new System.Drawing.Point(733, 125);
             this.CardBox24.Name = "CardBox24";
             this.CardBox24.Size = new System.Drawing.Size(60, 90);
             this.CardBox24.TabIndex = 75;
@@ -429,7 +438,7 @@
             // CardBox23
             // 
             this.CardBox23.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox23.Location = new System.Drawing.Point(667, 182);
+            this.CardBox23.Location = new System.Drawing.Point(667, 125);
             this.CardBox23.Name = "CardBox23";
             this.CardBox23.Size = new System.Drawing.Size(60, 90);
             this.CardBox23.TabIndex = 74;
@@ -439,7 +448,7 @@
             // CardBox22
             // 
             this.CardBox22.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox22.Location = new System.Drawing.Point(601, 182);
+            this.CardBox22.Location = new System.Drawing.Point(601, 125);
             this.CardBox22.Name = "CardBox22";
             this.CardBox22.Size = new System.Drawing.Size(60, 90);
             this.CardBox22.TabIndex = 73;
@@ -449,7 +458,7 @@
             // CardBox21
             // 
             this.CardBox21.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox21.Location = new System.Drawing.Point(535, 182);
+            this.CardBox21.Location = new System.Drawing.Point(535, 125);
             this.CardBox21.Name = "CardBox21";
             this.CardBox21.Size = new System.Drawing.Size(60, 90);
             this.CardBox21.TabIndex = 72;
@@ -459,7 +468,7 @@
             // CardBox20
             // 
             this.CardBox20.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox20.Location = new System.Drawing.Point(469, 182);
+            this.CardBox20.Location = new System.Drawing.Point(469, 125);
             this.CardBox20.Name = "CardBox20";
             this.CardBox20.Size = new System.Drawing.Size(60, 90);
             this.CardBox20.TabIndex = 71;
@@ -469,7 +478,7 @@
             // CardBox19
             // 
             this.CardBox19.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox19.Location = new System.Drawing.Point(403, 182);
+            this.CardBox19.Location = new System.Drawing.Point(403, 125);
             this.CardBox19.Name = "CardBox19";
             this.CardBox19.Size = new System.Drawing.Size(60, 90);
             this.CardBox19.TabIndex = 70;
@@ -479,7 +488,7 @@
             // CardBox18
             // 
             this.CardBox18.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox18.Location = new System.Drawing.Point(337, 182);
+            this.CardBox18.Location = new System.Drawing.Point(337, 125);
             this.CardBox18.Name = "CardBox18";
             this.CardBox18.Size = new System.Drawing.Size(60, 90);
             this.CardBox18.TabIndex = 69;
@@ -489,7 +498,7 @@
             // CardBox17
             // 
             this.CardBox17.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox17.Location = new System.Drawing.Point(271, 182);
+            this.CardBox17.Location = new System.Drawing.Point(271, 125);
             this.CardBox17.Name = "CardBox17";
             this.CardBox17.Size = new System.Drawing.Size(60, 90);
             this.CardBox17.TabIndex = 68;
@@ -499,7 +508,7 @@
             // CardBox16
             // 
             this.CardBox16.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox16.Location = new System.Drawing.Point(205, 182);
+            this.CardBox16.Location = new System.Drawing.Point(205, 125);
             this.CardBox16.Name = "CardBox16";
             this.CardBox16.Size = new System.Drawing.Size(60, 90);
             this.CardBox16.TabIndex = 67;
@@ -509,7 +518,7 @@
             // CardBox15
             // 
             this.CardBox15.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox15.Location = new System.Drawing.Point(139, 182);
+            this.CardBox15.Location = new System.Drawing.Point(139, 125);
             this.CardBox15.Name = "CardBox15";
             this.CardBox15.Size = new System.Drawing.Size(60, 90);
             this.CardBox15.TabIndex = 66;
@@ -519,7 +528,7 @@
             // CardBox14
             // 
             this.CardBox14.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox14.Location = new System.Drawing.Point(73, 182);
+            this.CardBox14.Location = new System.Drawing.Point(73, 125);
             this.CardBox14.Name = "CardBox14";
             this.CardBox14.Size = new System.Drawing.Size(60, 90);
             this.CardBox14.TabIndex = 65;
@@ -529,7 +538,7 @@
             // CardBox13
             // 
             this.CardBox13.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox13.Location = new System.Drawing.Point(865, 86);
+            this.CardBox13.Location = new System.Drawing.Point(865, 29);
             this.CardBox13.Name = "CardBox13";
             this.CardBox13.Size = new System.Drawing.Size(60, 90);
             this.CardBox13.TabIndex = 64;
@@ -539,7 +548,7 @@
             // CardBox12
             // 
             this.CardBox12.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox12.Location = new System.Drawing.Point(799, 86);
+            this.CardBox12.Location = new System.Drawing.Point(799, 29);
             this.CardBox12.Name = "CardBox12";
             this.CardBox12.Size = new System.Drawing.Size(60, 90);
             this.CardBox12.TabIndex = 63;
@@ -549,7 +558,7 @@
             // CardBox11
             // 
             this.CardBox11.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox11.Location = new System.Drawing.Point(733, 86);
+            this.CardBox11.Location = new System.Drawing.Point(733, 29);
             this.CardBox11.Name = "CardBox11";
             this.CardBox11.Size = new System.Drawing.Size(60, 90);
             this.CardBox11.TabIndex = 62;
@@ -559,7 +568,7 @@
             // CardBox10
             // 
             this.CardBox10.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox10.Location = new System.Drawing.Point(667, 86);
+            this.CardBox10.Location = new System.Drawing.Point(667, 29);
             this.CardBox10.Name = "CardBox10";
             this.CardBox10.Size = new System.Drawing.Size(60, 90);
             this.CardBox10.TabIndex = 61;
@@ -569,7 +578,7 @@
             // CardBox9
             // 
             this.CardBox9.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox9.Location = new System.Drawing.Point(601, 86);
+            this.CardBox9.Location = new System.Drawing.Point(601, 29);
             this.CardBox9.Name = "CardBox9";
             this.CardBox9.Size = new System.Drawing.Size(60, 90);
             this.CardBox9.TabIndex = 60;
@@ -579,7 +588,7 @@
             // CardBox8
             // 
             this.CardBox8.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox8.Location = new System.Drawing.Point(535, 86);
+            this.CardBox8.Location = new System.Drawing.Point(535, 29);
             this.CardBox8.Name = "CardBox8";
             this.CardBox8.Size = new System.Drawing.Size(60, 90);
             this.CardBox8.TabIndex = 59;
@@ -589,7 +598,7 @@
             // CardBox7
             // 
             this.CardBox7.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox7.Location = new System.Drawing.Point(469, 86);
+            this.CardBox7.Location = new System.Drawing.Point(469, 29);
             this.CardBox7.Name = "CardBox7";
             this.CardBox7.Size = new System.Drawing.Size(60, 90);
             this.CardBox7.TabIndex = 58;
@@ -599,7 +608,7 @@
             // CardBox6
             // 
             this.CardBox6.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox6.Location = new System.Drawing.Point(403, 86);
+            this.CardBox6.Location = new System.Drawing.Point(403, 29);
             this.CardBox6.Name = "CardBox6";
             this.CardBox6.Size = new System.Drawing.Size(60, 90);
             this.CardBox6.TabIndex = 57;
@@ -610,7 +619,7 @@
             // CardBox5
             // 
             this.CardBox5.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox5.Location = new System.Drawing.Point(337, 86);
+            this.CardBox5.Location = new System.Drawing.Point(337, 29);
             this.CardBox5.Name = "CardBox5";
             this.CardBox5.Size = new System.Drawing.Size(60, 90);
             this.CardBox5.TabIndex = 56;
@@ -620,7 +629,7 @@
             // CardBox4
             // 
             this.CardBox4.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox4.Location = new System.Drawing.Point(271, 86);
+            this.CardBox4.Location = new System.Drawing.Point(271, 29);
             this.CardBox4.Name = "CardBox4";
             this.CardBox4.Size = new System.Drawing.Size(60, 90);
             this.CardBox4.TabIndex = 55;
@@ -630,7 +639,7 @@
             // CardBox3
             // 
             this.CardBox3.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox3.Location = new System.Drawing.Point(205, 86);
+            this.CardBox3.Location = new System.Drawing.Point(205, 29);
             this.CardBox3.Name = "CardBox3";
             this.CardBox3.Size = new System.Drawing.Size(60, 90);
             this.CardBox3.TabIndex = 54;
@@ -640,7 +649,7 @@
             // CardBox2
             // 
             this.CardBox2.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox2.Location = new System.Drawing.Point(139, 86);
+            this.CardBox2.Location = new System.Drawing.Point(139, 29);
             this.CardBox2.Name = "CardBox2";
             this.CardBox2.Size = new System.Drawing.Size(60, 90);
             this.CardBox2.TabIndex = 53;
@@ -650,12 +659,90 @@
             // CardBox1
             // 
             this.CardBox1.Image = global::NervousBreakdown.Properties.Resources.card;
-            this.CardBox1.Location = new System.Drawing.Point(73, 86);
+            this.CardBox1.Location = new System.Drawing.Point(73, 29);
             this.CardBox1.Name = "CardBox1";
             this.CardBox1.Size = new System.Drawing.Size(60, 90);
             this.CardBox1.TabIndex = 52;
             this.CardBox1.TabStop = false;
             this.CardBox1.Click += new System.EventHandler(this.Card_Click);
+            // 
+            // playerPointLabel
+            // 
+            this.playerPointLabel.AutoSize = true;
+            this.playerPointLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.playerPointLabel.Location = new System.Drawing.Point(253, 484);
+            this.playerPointLabel.Name = "playerPointLabel";
+            this.playerPointLabel.Size = new System.Drawing.Size(23, 24);
+            this.playerPointLabel.TabIndex = 104;
+            this.playerPointLabel.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(90, 449);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(121, 24);
+            this.label4.TabIndex = 106;
+            this.label4.Text = "プレイヤー：";
+            // 
+            // NameLabel
+            // 
+            this.NameLabel.AutoSize = true;
+            this.NameLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.NameLabel.ForeColor = System.Drawing.Color.White;
+            this.NameLabel.Location = new System.Drawing.Point(211, 449);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(122, 24);
+            this.NameLabel.TabIndex = 105;
+            this.NameLabel.Text = "○○　○○";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(138, 484);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 24);
+            this.label1.TabIndex = 107;
+            this.label1.Text = "得点：";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Location = new System.Drawing.Point(678, 484);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 24);
+            this.label2.TabIndex = 110;
+            this.label2.Text = "得点：";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(707, 449);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 24);
+            this.label3.TabIndex = 109;
+            this.label3.Text = "NPC";
+            // 
+            // NPCPointLabel
+            // 
+            this.NPCPointLabel.AutoSize = true;
+            this.NPCPointLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.NPCPointLabel.Location = new System.Drawing.Point(757, 484);
+            this.NPCPointLabel.Name = "NPCPointLabel";
+            this.NPCPointLabel.Size = new System.Drawing.Size(23, 24);
+            this.NPCPointLabel.TabIndex = 108;
+            this.NPCPointLabel.Text = "0";
+            // 
+            // NPCTimer
+            // 
+            this.NPCTimer.Interval = 1000;
+            this.NPCTimer.Tick += new System.EventHandler(this.NPCTimer_Tick);
             // 
             // FormMainNPC
             // 
@@ -663,6 +750,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(1015, 536);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.NPCPointLabel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.NameLabel);
+            this.Controls.Add(this.playerPointLabel);
             this.Controls.Add(this.CardBox52);
             this.Controls.Add(this.CardBox51);
             this.Controls.Add(this.CardBox50);
@@ -773,6 +867,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CardBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -830,5 +925,13 @@
         private System.Windows.Forms.PictureBox CardBox3;
         private System.Windows.Forms.PictureBox CardBox2;
         private System.Windows.Forms.PictureBox CardBox1;
+        private System.Windows.Forms.Label playerPointLabel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label NameLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label NPCPointLabel;
+        private System.Windows.Forms.Timer NPCTimer;
     }
 }
