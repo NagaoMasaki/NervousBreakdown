@@ -53,6 +53,12 @@
     <Compile Include="FormResult.Designer.cs">
       <DependentUpon>FormResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormResultNPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormResultNPC.Designer.cs">
+      <DependentUpon>FormResultNPC.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTitle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormResult.resx">
       <DependentUpon>FormResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormResultNPC.resx">
+      <DependentUpon>FormResultNPC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTitle.resx">
       <DependentUpon>FormTitle.cs</DependentUpon>
