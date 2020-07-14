@@ -42,3 +42,5 @@ C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizy
 C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe
 C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.pdb
 C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csprojAssemblyReference.cache
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMainNPC.resources
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormTitle.resources

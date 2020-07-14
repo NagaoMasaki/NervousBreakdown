@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Card.cs" />
+    <Compile Include="FormMainNPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainNPC.Designer.cs">
+      <DependentUpon>FormMainNPC.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormResult.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Ranking.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainNPC.resx">
+      <DependentUpon>FormMainNPC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormResult.resx">
       <DependentUpon>FormResult.cs</DependentUpon>

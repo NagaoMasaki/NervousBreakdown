@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace NervousBreakdown
 {
-    public partial class FormMain : Form
+    public partial class FormMainNPC : Form
     {
         Player player = new Player();
         Card card = new Card();
@@ -19,20 +19,24 @@ namespace NervousBreakdown
         FormResult formResult = new FormResult();
 
         //画像
-        private PictureBox[] PictureArray = new PictureBox[53];
+        private PictureBox[] PictureArray = new PictureBox[52];
 
-        //一枚目を引いたか判定する変数
+        //一枚目を引いたか判定
         private bool drawFlag = false;
 
-        //二枚目を引いたか判定する変数
+        //二枚目を引いたか判定
         private bool twoDrawFlag = false;
 
-        private bool[] cpuMemory = new bool[53];
+        private bool[] cpuMemory = new bool[52];
 
-        private bool[] cardFlag = new bool[53];
+        //カードをが表になったか判定
+        private bool[] cardFlag = new bool[52];
 
         //ジャッジの判定を貰う変数
         bool j_hit = false;
+
+        //NPCのターン判定
+        bool npcTurn = false;
 
         //現在の引いた数
         private int drawCount = 0;
@@ -42,16 +46,14 @@ namespace NervousBreakdown
         //FormTitleから受け取る
         public String nameText { get; set; }
 
-        public FormMain()
+
+        public FormMainNPC()
         {
             InitializeComponent();
         }
 
-        private void FormMain_Load(object sender, EventArgs e)
+        private void FormMainNPC_Load(object sender, EventArgs e)
         {
-            //デバック用
-            this.NameLabel.Text = nameText;
-
             //デッキをシャッフルする
             card.CardMark();
 
@@ -109,8 +111,6 @@ namespace NervousBreakdown
             PictureArray[50] = this.CardBox51;
             PictureArray[51] = this.CardBox52;
 
-            //デバック用
-            //HitLabel.Text = drawFlag.ToString();
         }
 
         /// <summary>
@@ -120,9 +120,8 @@ namespace NervousBreakdown
         /// <param name="e"></param>
         private void Card_Click(object sender, EventArgs e)
         {
-          
             //カードを二枚引いたか
-            if(drawFlag == false || twoDrawFlag == false)
+            if (drawFlag == false || twoDrawFlag == false)
             {
                 //トランプの数分回す
                 for (int i = 0; i < PictureArray.Length; i++)
@@ -138,7 +137,8 @@ namespace NervousBreakdown
                         {
                             //ジャッジクラスで判定
                             j_hit = judge.Judgement(drawFlag, card.decks[i]);
-                            
+
+                            //プレイヤークラスにカードの情報を渡す
                             player.Select(drawFlag, card.decks[i]);
 
                             //カードを一枚引いているなら
@@ -160,15 +160,6 @@ namespace NervousBreakdown
                         cpuMemory[i] = true;
                     }
                 }
-
-            }
-
-            //デバック用
-            {
-                int a = count.GetCount();
-
-                HitLabel.Text = a.ToString();
-
             }
         }
 
@@ -177,7 +168,7 @@ namespace NervousBreakdown
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void FormMain_Click(object sender, EventArgs e)
+        private void FormMainNPC_Click(object sender, EventArgs e)
         {
             //二枚引いたならなら
             if (drawFlag == true && twoDrawFlag == true)
@@ -186,7 +177,7 @@ namespace NervousBreakdown
                 drawCount++;
 
                 //画面に表示
-                label1.Text = drawCount.ToString();
+                //label1.Text = drawCount.ToString();
 
                 //成功したか
                 if (j_hit == true)
@@ -198,7 +189,7 @@ namespace NervousBreakdown
                     int c = count.GetCount();
 
                     //26ペアそろったか？
-                    if(c == 26)
+                    if (c == 26)
                     {
                         //リザルトに入力した名前を入れる
                         formResult.text = nameText;
@@ -207,7 +198,7 @@ namespace NervousBreakdown
                         //
                         formResult.GetCount(drawCount);
                         //
-                        formResult.GetFormMain(this);
+                        formResult.GetFormMainNPC(this);
                         //メインの終了
                         this.Visible = false;
                     }
@@ -216,22 +207,22 @@ namespace NervousBreakdown
                 {
                     //違う数字の時
                     ResetBasa();
+
+                    npcTurn = true;
                 }
 
                 //引いた判定をリセット
                 drawFlag = false;
                 twoDrawFlag = false;
+            }
 
-                //デバック用
-                {
-                    int a = count.GetCount();
-
-                    HitLabel.Text = a.ToString();
-
-                }
+            //ターン中ループ
+            while(npcTurn == true)
+            {
+                //NPCに切り替え
+                NpcMove();
             }
         }
-
 
         /// <summary>
         /// カードを消す関数
@@ -241,6 +232,7 @@ namespace NervousBreakdown
             //カウントを増やす
             count.AddCount();
 
+
             for (int i = 0; i < cardFlag.Length; i++)
             {
                 //カードが表向きなら
@@ -249,35 +241,120 @@ namespace NervousBreakdown
                     //画像を消す
                     PictureArray[i].Visible = false;
                     //CPUが忘れる
-                    cpuMemory[i]= false;
+                    cpuMemory[i] = false;
                 }
             }
         }
 
 
         /// <summary>
-        /// カードをリセットする関数
+        /// 表向きのカードをリセットする関数
         /// </summary>
         public void ResetBasa()
         {
             //手札リセット
             player.Reset();
 
-            for (int i = 0; i < cardFlag.Length; i++)
+            for (int i = 0; i < cardFlag.Length;i++)
             {
-                //カードが表向きなら
-                if (cardFlag[i] == true)
+                if(cpuMemory[i] == true)
                 {
-                    //裏向きにする
                     cardFlag[i] = false;
-
-                    //画像を裏向き
+                    // 裏向きにする
                     PictureArray[i].Image = SetImage(53);
+                    cpuMemory[i] = false;
                 }
-            }
+            }            
+
+           
         }
 
 
+        /// <summary>
+        /// 敵の操作関数
+        /// </summary>
+        private void NpcMove()
+        {
+            //ランダムで数字を取得
+            int num = player.ReturnNum();
+
+            //引いてない数字が出るまで回す
+            while (cardFlag[num] == true)
+            {
+                //ランダムで数字を取得
+                num = player.ReturnNum();
+            }
+
+            // カードが裏向きか
+            if (cardFlag[num] == false)
+            {
+                //カードを表向き判定にする
+                cardFlag[num] = true;
+
+                //メモリーに記憶する
+                cpuMemory[num] = true;　
+
+                //カードの画像を表示
+                PictureArray[num].Image = SetImage(card.decks[num]);
+
+                //ジャッジクラスで判定
+                j_hit = judge.Judgement(drawFlag, card.decks[num]);
+
+                //プレイヤークラスにカードの情報を渡す
+                player.Select(drawFlag, card.decks[num]);
+
+                //カードを一枚引いているなら
+                if (drawFlag == true)
+                {
+                    //二枚目を引いた判定にする
+                    twoDrawFlag = true;
+                }
+                else
+                {
+                    //一枚目を引いた判定にする
+                    drawFlag = true;
+                }
+            }
+
+            //二枚引いたならなら
+            if (drawFlag == true && twoDrawFlag == true)
+            {
+                //成功したか
+                if (j_hit == true)
+                {
+                    //同じ数字の時
+                    PlayBase();
+                }
+                else
+                {
+                    //違う数字の時
+                    ResetBasa();
+
+                    //ターン終了
+                    npcTurn = false;
+                }
+
+                //引いた判定をリセット
+                drawFlag = false;
+                twoDrawFlag = false;
+            }
+        }
+
+        /// <summary>
+        /// タイトルを消す関数
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            formTitle.Close();
+        }
+
+        /// <summary>
+        /// 引数から画像を見つける関数
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public Image SetImage(int s)
         {
             Image image = NervousBreakdown.Properties.Resources.card;
@@ -446,9 +523,6 @@ namespace NervousBreakdown
             return image;
         }
 
-        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            formTitle.Close();
-        }
+
     }
 }
