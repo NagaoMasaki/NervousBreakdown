@@ -18,23 +18,16 @@ namespace NervousBreakdown
         Count count = new Count();
         FormResult formResult = new FormResult();
 
-        //画像
         private PictureBox[] PictureArray = new PictureBox[53];
 
-        //一枚目を引いたか判定する変数
         private bool drawFlag = false;
-
-        //二枚目を引いたか判定する変数
         private bool twoDrawFlag = false;
 
         private bool[] cpuMemory = new bool[53];
 
         private bool[] cardFlag = new bool[53];
 
-        //ジャッジの判定を貰う変数
         bool j_hit = false;
-
-        //現在の引いた数
         private int drawCount = 0;
 
         public FormTitle formTitle { get; set; }
@@ -55,7 +48,6 @@ namespace NervousBreakdown
             //デッキをシャッフルする
             card.CardMark();
 
-            //画像の情報をListに代入する
             PictureArray[0] = this.CardBox1;
             PictureArray[1] = this.CardBox2;
             PictureArray[2] = this.CardBox3;
@@ -121,13 +113,11 @@ namespace NervousBreakdown
         private void Card_Click(object sender, EventArgs e)
         {
           
-            //カードを二枚引いたか
+
             if(drawFlag == false || twoDrawFlag == false)
             {
-                //トランプの数分回す
                 for (int i = 0; i < PictureArray.Length; i++)
                 {
-                    //クリックした画像か
                     if (sender.Equals(PictureArray[i]))
                     {
                         //カードの画像を表示
@@ -136,9 +126,7 @@ namespace NervousBreakdown
                         //カードが裏向きか
                         if (cardFlag[i] == false)
                         {
-                            //ジャッジクラスで判定
                             j_hit = judge.Judgement(drawFlag, card.decks[i]);
-                            
                             player.Select(drawFlag, card.decks[i]);
 
                             //カードを一枚引いているなら
@@ -182,33 +170,25 @@ namespace NervousBreakdown
             //二枚引いたならなら
             if (drawFlag == true && twoDrawFlag == true)
             {
-                //引いたカウントアップ
                 drawCount++;
 
-                //画面に表示
                 label1.Text = drawCount.ToString();
 
-                //成功したか
                 if (j_hit == true)
                 {
                     //同じ数字の時
                     PlayBase();
 
-                    //代入
                     int c = count.GetCount();
 
-                    //26ペアそろったか？
                     if(c == 26)
                     {
-                        //リザルトに入力した名前を入れる
                         formResult.text = nameText;
-                        //リザルトの表示
-                        formResult.Show();
-                        //
                         formResult.GetCount(drawCount);
-                        //
                         formResult.GetFormMain(this);
-                        //メインの終了
+                        formResult.Show();
+                        //終了
+                        //this.Close();
                         this.Visible = false;
                     }
                 }
@@ -218,7 +198,6 @@ namespace NervousBreakdown
                     ResetBasa();
                 }
 
-                //引いた判定をリセット
                 drawFlag = false;
                 twoDrawFlag = false;
 
