@@ -40,10 +40,12 @@ namespace NervousBreakdown
 
         private void FormResultNPC_Load(object sender, EventArgs e)
         {
+            //それぞれの枚数と名前を表示する
             maisu1.Text = playerMaisu.ToString();
-            maisu.Text = npcMaisu.ToString();
-            player.Text =text;
+            maisu2.Text = npcMaisu.ToString();
+            player.Text = text;
 
+            //プレイヤーとNPCの枚数によって勝敗を決める
             if (playerMaisu > npcMaisu)
             {
                 shohai.Text = "勝ち";
