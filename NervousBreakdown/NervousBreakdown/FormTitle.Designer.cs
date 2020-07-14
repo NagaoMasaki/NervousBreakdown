@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.box = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.TitleLabel = new System.Windows.Forms.Label();
             this.OnePlayButton = new System.Windows.Forms.Button();
-            this.NPCPlayButton = new System.Windows.Forms.Button();
+            this.CPUPlayButton = new System.Windows.Forms.Button();
             this.NameBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.box)).BeginInit();
@@ -46,19 +46,19 @@
             this.box.TabIndex = 3;
             this.box.TabStop = false;
             // 
-            // label1
+            // TitleLabel
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkGreen;
-            this.label1.Font = new System.Drawing.Font("ＭＳ ゴシック", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(176, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(426, 97);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "神経衰弱";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TitleLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.BackColor = System.Drawing.Color.DarkGreen;
+            this.TitleLabel.Font = new System.Drawing.Font("ＭＳ ゴシック", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.ForeColor = System.Drawing.Color.White;
+            this.TitleLabel.Location = new System.Drawing.Point(176, 61);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(426, 97);
+            this.TitleLabel.TabIndex = 4;
+            this.TitleLabel.Text = "神経衰弱";
+            this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // OnePlayButton
             // 
@@ -71,23 +71,24 @@
             this.OnePlayButton.UseVisualStyleBackColor = true;
             this.OnePlayButton.Click += new System.EventHandler(this.OnePlayButton_Click);
             // 
-            // NPCPlayButton
+            // CPUPlayButton
             // 
-            this.NPCPlayButton.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.NPCPlayButton.Location = new System.Drawing.Point(470, 299);
-            this.NPCPlayButton.Name = "NPCPlayButton";
-            this.NPCPlayButton.Size = new System.Drawing.Size(208, 61);
-            this.NPCPlayButton.TabIndex = 6;
-            this.NPCPlayButton.Text = "NPCと";
-            this.NPCPlayButton.UseVisualStyleBackColor = true;
+            this.CPUPlayButton.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.CPUPlayButton.Location = new System.Drawing.Point(470, 299);
+            this.CPUPlayButton.Name = "CPUPlayButton";
+            this.CPUPlayButton.Size = new System.Drawing.Size(208, 61);
+            this.CPUPlayButton.TabIndex = 6;
+            this.CPUPlayButton.Text = "CPUと";
+            this.CPUPlayButton.UseVisualStyleBackColor = true;
+            this.CPUPlayButton.Click += new System.EventHandler(this.CPUPlayButton_Click);
             // 
             // NameBox
             // 
             this.NameBox.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.NameBox.Location = new System.Drawing.Point(407, 198);
+            this.NameBox.Location = new System.Drawing.Point(384, 215);
             this.NameBox.Multiline = true;
             this.NameBox.Name = "NameBox";
-            this.NameBox.Size = new System.Drawing.Size(230, 50);
+            this.NameBox.Size = new System.Drawing.Size(144, 33);
             this.NameBox.TabIndex = 7;
             this.NameBox.Text = "テスト01";
             // 
@@ -110,9 +111,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.NameBox);
-            this.Controls.Add(this.NPCPlayButton);
+            this.Controls.Add(this.CPUPlayButton);
             this.Controls.Add(this.OnePlayButton);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.box);
             this.Name = "FormTitle";
             this.Text = "FormTitle";
@@ -125,9 +126,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox box;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Button OnePlayButton;
-        private System.Windows.Forms.Button NPCPlayButton;
+        private System.Windows.Forms.Button CPUPlayButton;
         private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Label label2;
     }

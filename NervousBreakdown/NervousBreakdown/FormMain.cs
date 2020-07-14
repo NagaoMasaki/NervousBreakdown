@@ -184,9 +184,9 @@ namespace NervousBreakdown
                     if(c == 26)
                     {
                         formResult.text = nameText;
-                        formResult.Show();
                         formResult.GetCount(drawCount);
                         formResult.GetFormMain(this);
+                        formResult.Show();
                         //終了
                         //this.Close();
                         this.Visible = false;

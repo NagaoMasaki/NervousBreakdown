@@ -14,6 +14,9 @@ namespace NervousBreakdown
     {
         FormMain formMain = new FormMain();
 
+        //CPUのボタンを押したかどうかのフラグ
+        private bool cpuButtonFlag = false;
+
         public FormTitle()
         {
             InitializeComponent();
@@ -23,11 +26,23 @@ namespace NervousBreakdown
         {
             //メインの名前用Textに代入
             formMain.nameText = NameBox.Text;
-            //メイン開始
-            formMain.Show();
+            //titleを終了させるためにmainに代入する
             formMain.formTitle = this;
             //タイトル終了
             this.Visible = false;
+
+            //メイン開始
+            formMain.Show();
+            
+            
+        }
+
+        private void CPUPlayButton_Click(object sender, EventArgs e)
+        {
+            if(!cpuButtonFlag)
+            {
+
+            }
         }
     }
 }
