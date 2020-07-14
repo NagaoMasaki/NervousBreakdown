@@ -24,15 +24,19 @@ namespace NervousBreakdown
 
         private void OnePlayButton_Click(object sender, EventArgs e)
         {
-            //メインの名前用Textに代入
-            formMain.nameText = NameBox.Text;
-            //titleを終了させるためにmainに代入する
-            formMain.formTitle = this;
-            //タイトル終了
-            this.Visible = false;
+            if(!cpuButtonFlag)
+            {
+                //メインの名前用Textに代入
+                formMain.nameText = NameBox.Text;
+                //titleを終了させるためにmainに代入する
+                formMain.formTitle = this;
+                //タイトル終了
+                this.Visible = false;
 
-            //メイン開始
-            formMain.Show();
+                //メイン開始
+                formMain.Show();
+            }
+            
             
             
         }
@@ -41,6 +45,16 @@ namespace NervousBreakdown
         {
             if(!cpuButtonFlag)
             {
+                //テキスト変更
+                OnePlayButton.Text = "先攻";
+                CPUPlayButton.Text = "後攻";
+                //フラグを立てる
+                cpuButtonFlag = true;
+            }
+            else
+            {
+                //後攻
+
 
             }
         }
