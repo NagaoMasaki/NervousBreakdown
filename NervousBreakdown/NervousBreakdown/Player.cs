@@ -70,49 +70,6 @@ namespace NervousBreakdown
                 //引いたカードを格納
                 open[1] = drawCardNum;
             }
-
-            //for (int i = 0; i < 2; i++)
-            //{
-            //    if (i == 0)
-            //    {
-            //        //ランダム生成
-            //        Random random = new Random();
-            //        //カードを引く
-            //        int cpuCard = random.Next(0, 51);
-            //        //引いたカードかどうかチェック
-            //        //bool drawCpu = drawCpuCard;
-
-            //        //まだ引いてないカードが出るまで引く
-            //        while (drawCpuCard == false)
-            //        {
-            //            cpuCard = random.Next(0, 51);
-            //            //drawCpu = drawCpuCard;
-            //        }
-            //        //引いたカードを格納
-            //        open[0] = cpuCard;
-            //    }
-            //    //一枚目に引いたカードが覚えてる数値と同じなら
-            //    else if (i == 1 && cpuMemory[open[0]] == true)
-            //    {
-            //        //open[1] = ;
-            //    }
-            //    else
-            //    {
-            //        Random random = new Random();
-            //        //カードを引く
-            //        int cpuCard = random.Next(0, 51);
-            //        //引いたカードかどうかチェック
-            //        bool drawCpu = drawCpuCard;
-            //        //まだ引いてないカードが出るまで引く
-            //        while (drawCpu)
-            //        {
-            //            cpuCard = random.Next(0, 51);
-            //            drawCpu = drawCpuCard;
-            //        }
-            //        //引いたカードを格納
-            //        open[1] = cpuCard;
-            //    }
-            //}
         }
     }
 }
