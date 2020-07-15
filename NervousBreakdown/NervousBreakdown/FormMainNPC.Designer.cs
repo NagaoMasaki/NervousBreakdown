@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.CardBox52 = new System.Windows.Forms.PictureBox();
             this.CardBox51 = new System.Windows.Forms.PictureBox();
             this.CardBox50 = new System.Windows.Forms.PictureBox();
@@ -88,7 +87,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.NPCPointLabel = new System.Windows.Forms.Label();
-            this.NPCTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.CardBox52)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox51)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox50)).BeginInit();
@@ -739,11 +737,6 @@
             this.NPCPointLabel.TabIndex = 108;
             this.NPCPointLabel.Text = "0";
             // 
-            // NPCTimer
-            // 
-            this.NPCTimer.Interval = 1000;
-            this.NPCTimer.Tick += new System.EventHandler(this.NPCTimer_Tick);
-            // 
             // FormMainNPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -814,6 +807,7 @@
             this.Text = "FormMainNPC";
             this.Load += new System.EventHandler(this.FormMainNPC_Load);
             this.Click += new System.EventHandler(this.FormMainNPC_Click);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FormMainNPC_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.CardBox52)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox51)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardBox50)).EndInit();
@@ -932,6 +926,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label NPCPointLabel;
-        private System.Windows.Forms.Timer NPCTimer;
     }
 }

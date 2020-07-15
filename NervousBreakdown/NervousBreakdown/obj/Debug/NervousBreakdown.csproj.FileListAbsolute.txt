@@ -56,3 +56,17 @@ C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreak
 C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.CoreCompileInputs.cache
 C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.exe
 C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.pdb
+D:\仕事\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe.config
+D:\仕事\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe
+D:\仕事\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.pdb
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csprojAssemblyReference.cache
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMain.resources
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMainNPC.resources
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormResult.resources
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormResultNPC.resources
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormTitle.resources
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.Properties.Resources.resources
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.GenerateResource.cache
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.CoreCompileInputs.cache
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.exe
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.pdb
