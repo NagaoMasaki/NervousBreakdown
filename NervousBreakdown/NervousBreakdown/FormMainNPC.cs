@@ -16,7 +16,7 @@ namespace NervousBreakdown
         Player player = new Player();
         Card card = new Card();
         Judge judge = new Judge();
-        FormResultNPC formResultNPC = new FormResultNPC();
+        FormResult formResult = new FormResult();
 
         //画像
         private PictureBox[] PictureArray = new PictureBox[52];
@@ -51,6 +51,14 @@ namespace NervousBreakdown
 
         //FormTitleから先攻後攻を受け取る true=先攻
         public bool firstORSecond { get; set; }
+
+        //ＮＰＣのカードを引くインターバル
+        private int npcInterval = 0;
+        //ＮＰＣのカードを引くインターバルカウント
+        private static int NPC_DROW_INTERVAL = 300000;
+
+        //スタートフラグ
+        private bool startFlag = false;
 
         public FormMainNPC()
         {
@@ -119,15 +127,6 @@ namespace NervousBreakdown
             PictureArray[50] = this.CardBox51;
             PictureArray[51] = this.CardBox52;
 
-            //NPCが先攻か後攻か
-            npcTurn = !firstORSecond;
-
-            //NPCのターン中ループ
-            while (npcTurn == true)
-            {
-                //NPCに切り替え
-                NpcMove();
-            }
         }
 
         /// <summary>
@@ -137,47 +136,51 @@ namespace NervousBreakdown
         /// <param name="e"></param>
         private void Card_Click(object sender, EventArgs e)
         {
-            //カードを二枚引いたか
-            if (drawFlag == false || twoDrawFlag == false)
+            if(startFlag)
             {
-                //トランプの数分回す
-                for (int i = 0; i < PictureArray.Length; i++)
+                //カードを二枚引いたか
+                if (drawFlag == false || twoDrawFlag == false)
                 {
-                    //クリックした画像か
-                    if (sender.Equals(PictureArray[i]))
+                    //トランプの数分回す
+                    for (int i = 0; i < PictureArray.Length; i++)
                     {
-                        //カードの画像を表示
-                        PictureArray[i].Image = SetImage(card.decks[i]);
-
-                        //カードが裏向きか
-                        if (cardFlag[i] == false)
+                        //クリックした画像か
+                        if (sender.Equals(PictureArray[i]))
                         {
-                            //ジャッジクラスで判定
-                            j_hit = judge.Judgement(drawFlag, card.decks[i]);
+                            //カードの画像を表示
+                            PictureArray[i].Image = SetImage(card.decks[i]);
 
-                            //プレイヤークラスにカードの情報を渡す
-                            player.Select(drawFlag, card.decks[i]);
+                            //カードが裏向きか
+                            if (cardFlag[i] == false)
+                            {
+                                //ジャッジクラスで判定
+                                j_hit = judge.Judgement(drawFlag, card.decks[i]);
 
-                            //カードを一枚引いているなら
-                            if (drawFlag == true)
-                            {
-                                //二枚目を引いた判定にする
-                                twoDrawFlag = true;
+                                //プレイヤークラスにカードの情報を渡す
+                                player.Select(drawFlag, card.decks[i]);
+
+                                //カードを一枚引いているなら
+                                if (drawFlag == true)
+                                {
+                                    //二枚目を引いた判定にする
+                                    twoDrawFlag = true;
+                                }
+                                else
+                                {
+                                    //一枚目を引いた判定にする
+                                    drawFlag = true;
+                                }
                             }
-                            else
-                            {
-                                //一枚目を引いた判定にする
-                                drawFlag = true;
-                            }
+
+                            //引いた判定にする
+                            cardFlag[i] = true;
+                            //CPUが覚える
+                            cpuMemory[i] = true;
                         }
-
-                        //引いた判定にする
-                        cardFlag[i] = true;
-                        //CPUが覚える
-                        cpuMemory[i] = true;
                     }
                 }
             }
+            
         }
 
         /// <summary>
@@ -204,15 +207,8 @@ namespace NervousBreakdown
                     if (sum == 26)
                     {
                         //リザルトに入力した名前を入れる
-                        formResultNPC.text = nameText;
-
-                        //プレイヤーとNPCのポイントをリザルトに送る
-                        formResultNPC.GetPoint(playerPoint,npcPoint);
-
-                        formResultNPC.GetFormMain(this);
-
-                        formResultNPC.Show();
-
+                        formResult.text = nameText;
+ 
                         //メインの終了
                         this.Visible = false;
                         //リザルトの表示
@@ -227,7 +223,7 @@ namespace NervousBreakdown
 
                     //NPCのターンにする
                     npcTurn = true;
-                    //NPCTimer.Enabled = true;
+
                 }
 
                 //引いた判定をリセット
@@ -235,9 +231,12 @@ namespace NervousBreakdown
                 twoDrawFlag = false;
             }
 
+            npcInterval = 0;
             //NPCのターン中ループ
             while (npcTurn == true)
             {
+                //インターバルのカウント
+                npcInterval++;
                 //NPCに切り替え
                 NpcMove();
             }
@@ -311,71 +310,84 @@ namespace NervousBreakdown
         /// </summary>
         private void NpcMove()
         {
-            //ランダムで数字を取得
-            int num = player.ReturnNum();
-
+             //ランダムで数字を取得
+             int num = player.ReturnNum();
+            
             //引いてない数字が出るまで回す
             while (cardFlag[num] == true)
             {
                 //ランダムで数字を取得
                 num = player.ReturnNum();
             }
-
-            // カードが裏向きか
-            if (cardFlag[num] == false)
+            
+            if(npcInterval >= NPC_DROW_INTERVAL && !twoDrawFlag)
             {
-                //カードを表向き判定にする
-                cardFlag[num] = true;
-
-                //メモリーに記憶する
-                cpuMemory[num] = true;　
-
-                //カードの画像を表示
-                PictureArray[num].Image = SetImage(card.decks[num]);
-                PictureArray[num].Refresh();
-
-                //ジャッジクラスで判定
-                j_hit = judge.Judgement(drawFlag, card.decks[num]);
-
-                //プレイヤークラスにカードの情報を渡す
-                player.Select(drawFlag, card.decks[num]);
-
-                //カードを一枚引いているなら
-                if (drawFlag == true)
+                // カードが裏向きか
+                if (cardFlag[num] == false)
                 {
-                    //二枚目を引いた判定にする
-                    twoDrawFlag = true;
+                    //カードを表向き判定にする
+                    cardFlag[num] = true;
+
+                    //メモリーに記憶する
+                    cpuMemory[num] = true;
+
+                    //カードの画像を表示
+                    PictureArray[num].Image = SetImage(card.decks[num]);
+                    PictureArray[num].Refresh();
+
+                    //ジャッジクラスで判定
+                    j_hit = judge.Judgement(drawFlag, card.decks[num]);
+
+                    //プレイヤークラスにカードの情報を渡す
+                    player.Select(drawFlag, card.decks[num]);
+
+                    //カードを一枚引いているなら
+                    if (drawFlag == true)
+                    {
+                        //二枚目を引いた判定にする
+                        twoDrawFlag = true;
+
+                    }
+                    else
+                    {
+                        //一枚目を引いた判定にする
+                        drawFlag = true;
+                    }
+                    npcInterval = 0;
                 }
-                else
-                {
-                    //一枚目を引いた判定にする
-                    drawFlag = true;
-                }
+            
+                
             }
 
             //二枚引いたならなら
             if (drawFlag == true && twoDrawFlag == true)
             {
-                //成功したか
-                if (j_hit == true)
+                if (npcInterval >= NPC_DROW_INTERVAL)
                 {
-                    //同じ数字の時
-                    GetPoint();
-                }
-                else
-                {
-                    //違う数字の時
-                    ResetCard();
+                    //成功したか
+                    if (j_hit == true)
+                    {
+                        //同じ数字の時
+                        GetPoint();
+                    }
+                    else
+                    {
+                        //違う数字の時
+                        ResetCard();
 
-                    //ターン終了
-                    npcTurn = false;
-                    //NPCTimer.Enabled = false;
-                }
+                        //ターン終了
+                        npcTurn = false;
+                    }
 
-                //引いた判定をリセット
-                drawFlag = false;
-                twoDrawFlag = false;
+                    //引いた判定をリセット
+                    drawFlag = false;
+                    twoDrawFlag = false;
+
+                    npcInterval = 0;
+                }
             }
+
+            
         }
 
         /// <summary>
@@ -383,17 +395,9 @@ namespace NervousBreakdown
         /// </summary>
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            formResultNPC.Close();
+            formResult.Close();
             formTitle.Close();
             Application.Exit();
-        }
-
-        /// <summary>
-        /// タイマー関数
-        /// </summary>
-        private void NPCTimer_Tick(object sender, EventArgs e)
-        {
-
         }
 
         /// <summary>
@@ -567,6 +571,27 @@ namespace NervousBreakdown
             return image;
         }
 
- 
+        private void FormMainNPC_MouseClick(object sender, MouseEventArgs e)
+        {
+            //スタートフラグがたってなかったら
+            if(!startFlag)
+            {
+                //NPCが先攻か後攻か
+                npcTurn = !firstORSecond;
+
+                npcInterval = 0;
+                //NPCのターン中ループ
+                while (npcTurn == true)
+                {
+                    //インターバルのカウント
+                    npcInterval++;
+                    //NPCに切り替え
+                    NpcMove();
+                }
+                //スタートフラグを立てる
+                startFlag = true;
+            }
+            
+        }
     }
 }
