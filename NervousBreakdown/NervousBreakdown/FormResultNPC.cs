@@ -12,22 +12,22 @@ namespace NervousBreakdown
 {
     public partial class FormResultNPC : Form
     {
-        FormMain formMain;
+        FormMainNPC formMainNPC;
 
         //枚数の変数
-        public int playerMaisu = 0;
-        public int npcMaisu = 0;
+        private int p_Point = 0;
+        private int n_Point = 0;
 
-        public void GetFormMain(FormMain FormMain)
+        public void GetFormMain(FormMainNPC FormMainNPC)
         {
-            this.formMain = FormMain;
+            this.formMainNPC = FormMainNPC;
         }
 
         //枚数取得
-        public void GetMaisu(int playerCount, int npcCount)
+        public void GetPoint(int playerCount, int npcCount)
         {
-            this.playerMaisu = playerCount;
-            this.playerMaisu = npcCount;
+            this.p_Point = playerCount;
+            this.n_Point = npcCount;
         }
 
         //FormMainから受け取る
@@ -41,28 +41,28 @@ namespace NervousBreakdown
         private void FormResultNPC_Load(object sender, EventArgs e)
         {
             //それぞれの枚数と名前を表示する
-            maisu1.Text = playerMaisu.ToString();
-            maisu2.Text = npcMaisu.ToString();
-            player.Text = text;
+            playerPoint.Text = p_Point.ToString();
+            npcPoint.Text = n_Point.ToString();
+            playerLabel.Text = text;
 
             //プレイヤーとNPCの枚数によって勝敗を決める
-            if (playerMaisu > npcMaisu)
+            if (p_Point > n_Point)
             {
-                shohai.Text = "勝ち";
+                ResultLabel.Text = "勝ち";
             }
-            else if (playerMaisu < npcMaisu)
+            else if (p_Point < n_Point)
             {
-                shohai.Text = "負け";
+                ResultLabel.Text = "負け";
             }
             else
             {
-                shohai.Text = "引き分け";
+                ResultLabel.Text = "引き分け";
             }
-
         }
+
         private void FormResultNPC_MouseClick(object sender, MouseEventArgs e)
         {
-            formMain.Close();
+            formMainNPC.Close();
             this.Close();
             //アプリケーションを終了する
             Application.Exit();

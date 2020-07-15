@@ -28,81 +28,130 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.shohai = new System.Windows.Forms.Label();
-            this.player = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.maisu1 = new System.Windows.Forms.Label();
-            this.maisu2 = new System.Windows.Forms.Label();
+            this.ResultLabel = new System.Windows.Forms.Label();
+            this.playerLabel = new System.Windows.Forms.Label();
+            this.npcLabel = new System.Windows.Forms.Label();
+            this.playerPoint = new System.Windows.Forms.Label();
+            this.npcPoint = new System.Windows.Forms.Label();
+            this.ExitResultLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // shohai
+            // ResultLabel
             // 
-            this.shohai.AutoSize = true;
-            this.shohai.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.shohai.ForeColor = System.Drawing.Color.White;
-            this.shohai.Location = new System.Drawing.Point(320, 121);
-            this.shohai.Name = "shohai";
-            this.shohai.Size = new System.Drawing.Size(131, 53);
-            this.shohai.TabIndex = 0;
-            this.shohai.Text = "勝敗";
+            this.ResultLabel.AutoSize = true;
+            this.ResultLabel.Font = new System.Drawing.Font("ＭＳ ゴシック", 55.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ResultLabel.ForeColor = System.Drawing.Color.White;
+            this.ResultLabel.Location = new System.Drawing.Point(404, 56);
+            this.ResultLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(230, 93);
+            this.ResultLabel.TabIndex = 0;
+            this.ResultLabel.Text = "勝敗";
             // 
-            // player
+            // playerLabel
             // 
-            this.player.AutoSize = true;
-            this.player.Font = new System.Drawing.Font("ＭＳ ゴシック", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.player.ForeColor = System.Drawing.Color.White;
-            this.player.Location = new System.Drawing.Point(190, 214);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(75, 20);
-            this.player.TabIndex = 1;
-            this.player.Text = "player";
+            this.playerLabel.AutoSize = true;
+            this.playerLabel.Font = new System.Drawing.Font("ＭＳ ゴシック", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.playerLabel.ForeColor = System.Drawing.Color.White;
+            this.playerLabel.Location = new System.Drawing.Point(216, 171);
+            this.playerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.playerLabel.Name = "playerLabel";
+            this.playerLabel.Size = new System.Drawing.Size(143, 40);
+            this.playerLabel.TabIndex = 1;
+            this.playerLabel.Text = "PLAYER";
             // 
-            // label2
+            // npcLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("ＭＳ ゴシック", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(520, 214);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "NPC";
+            this.npcLabel.AutoSize = true;
+            this.npcLabel.Font = new System.Drawing.Font("ＭＳ ゴシック", 24F, System.Drawing.FontStyle.Bold);
+            this.npcLabel.ForeColor = System.Drawing.Color.White;
+            this.npcLabel.Location = new System.Drawing.Point(689, 171);
+            this.npcLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.npcLabel.Name = "npcLabel";
+            this.npcLabel.Size = new System.Drawing.Size(80, 40);
+            this.npcLabel.TabIndex = 2;
+            this.npcLabel.Text = "NPC";
             // 
-            // maisu1
+            // playerPoint
             // 
-            this.maisu1.AutoSize = true;
-            this.maisu1.Font = new System.Drawing.Font("ＭＳ ゴシック", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.maisu1.ForeColor = System.Drawing.Color.White;
-            this.maisu1.Location = new System.Drawing.Point(191, 269);
-            this.maisu1.Name = "maisu1";
-            this.maisu1.Size = new System.Drawing.Size(51, 20);
-            this.maisu1.TabIndex = 3;
-            this.maisu1.Text = "枚数";
+            this.playerPoint.AutoSize = true;
+            this.playerPoint.Font = new System.Drawing.Font("ＭＳ ゴシック", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.playerPoint.ForeColor = System.Drawing.Color.White;
+            this.playerPoint.Location = new System.Drawing.Point(259, 239);
+            this.playerPoint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.playerPoint.Name = "playerPoint";
+            this.playerPoint.Size = new System.Drawing.Size(59, 40);
+            this.playerPoint.TabIndex = 3;
+            this.playerPoint.Text = "00";
             // 
-            // maisu2
+            // npcPoint
             // 
-            this.maisu2.AutoSize = true;
-            this.maisu2.Font = new System.Drawing.Font("ＭＳ ゴシック", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.maisu2.ForeColor = System.Drawing.Color.White;
-            this.maisu2.Location = new System.Drawing.Point(519, 269);
-            this.maisu2.Name = "maisu2";
-            this.maisu2.Size = new System.Drawing.Size(51, 20);
-            this.maisu2.TabIndex = 4;
-            this.maisu2.Text = "枚数";
+            this.npcPoint.AutoSize = true;
+            this.npcPoint.Font = new System.Drawing.Font("ＭＳ ゴシック", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.npcPoint.ForeColor = System.Drawing.Color.White;
+            this.npcPoint.Location = new System.Drawing.Point(699, 239);
+            this.npcPoint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.npcPoint.Name = "npcPoint";
+            this.npcPoint.Size = new System.Drawing.Size(59, 40);
+            this.npcPoint.TabIndex = 4;
+            this.npcPoint.Text = "00";
+            // 
+            // ExitResultLabel
+            // 
+            this.ExitResultLabel.AutoSize = true;
+            this.ExitResultLabel.ForeColor = System.Drawing.Color.White;
+            this.ExitResultLabel.Location = new System.Drawing.Point(914, 529);
+            this.ExitResultLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ExitResultLabel.Name = "ExitResultLabel";
+            this.ExitResultLabel.Size = new System.Drawing.Size(128, 15);
+            this.ExitResultLabel.TabIndex = 6;
+            this.ExitResultLabel.Text = "画面をクリックで終了";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::NervousBreakdown.Properties.Resources.character_boy_normal;
+            this.pictureBox1.Location = new System.Drawing.Point(170, 309);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(221, 204);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::NervousBreakdown.Properties.Resources.omocha_robot;
+            this.pictureBox2.Location = new System.Drawing.Point(633, 309);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(221, 204);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
             // 
             // FormResultNPC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.maisu2);
-            this.Controls.Add(this.maisu1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.player);
-            this.Controls.Add(this.shohai);
+            this.BackColor = System.Drawing.Color.DarkGreen;
+            this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ExitResultLabel);
+            this.Controls.Add(this.npcPoint);
+            this.Controls.Add(this.playerPoint);
+            this.Controls.Add(this.npcLabel);
+            this.Controls.Add(this.playerLabel);
+            this.Controls.Add(this.ResultLabel);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormResultNPC";
             this.Text = "FormResultNPC";
+            this.Load += new System.EventHandler(this.FormResultNPC_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FormResultNPC_MouseClick);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,10 +159,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label shohai;
-        private System.Windows.Forms.Label player;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label maisu1;
-        private System.Windows.Forms.Label maisu2;
+        private System.Windows.Forms.Label ResultLabel;
+        private System.Windows.Forms.Label playerLabel;
+        private System.Windows.Forms.Label npcLabel;
+        private System.Windows.Forms.Label playerPoint;
+        private System.Windows.Forms.Label npcPoint;
+        private System.Windows.Forms.Label ExitResultLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -16,7 +16,7 @@ namespace NervousBreakdown
         Player player = new Player();
         Card card = new Card();
         Judge judge = new Judge();
-        FormResult formResult = new FormResult();
+        FormResultNPC formResultNPC = new FormResultNPC();
 
         //画像
         private PictureBox[] PictureArray = new PictureBox[52];
@@ -204,8 +204,15 @@ namespace NervousBreakdown
                     if (sum == 26)
                     {
                         //リザルトに入力した名前を入れる
-                        formResult.text = nameText;
- 
+                        formResultNPC.text = nameText;
+
+                        //プレイヤーとNPCのポイントをリザルトに送る
+                        formResultNPC.GetPoint(playerPoint,npcPoint);
+
+                        formResultNPC.GetFormMain(this);
+
+                        formResultNPC.Show();
+
                         //メインの終了
                         this.Visible = false;
                         //リザルトの表示
@@ -220,7 +227,7 @@ namespace NervousBreakdown
 
                     //NPCのターンにする
                     npcTurn = true;
-                    NPCTimer.Enabled = true;
+                    //NPCTimer.Enabled = true;
                 }
 
                 //引いた判定をリセット
@@ -326,6 +333,7 @@ namespace NervousBreakdown
                 //カードの画像を表示
                 PictureArray[num].Image = SetImage(card.decks[num]);
                 PictureArray[num].Refresh();
+
                 //ジャッジクラスで判定
                 j_hit = judge.Judgement(drawFlag, card.decks[num]);
 
@@ -361,7 +369,7 @@ namespace NervousBreakdown
 
                     //ターン終了
                     npcTurn = false;
-                    NPCTimer.Enabled = false;
+                    //NPCTimer.Enabled = false;
                 }
 
                 //引いた判定をリセット
@@ -375,7 +383,7 @@ namespace NervousBreakdown
         /// </summary>
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            formResult.Close();
+            formResultNPC.Close();
             formTitle.Close();
             Application.Exit();
         }
@@ -385,7 +393,7 @@ namespace NervousBreakdown
         /// </summary>
         private void NPCTimer_Tick(object sender, EventArgs e)
         {
-   
+
         }
 
         /// <summary>

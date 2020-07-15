@@ -289,4 +289,10 @@
   <data name="party_cracker" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\party_cracker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="character_boy_normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\character_boy_normal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="omocha_robot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\omocha_robot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
