@@ -16,7 +16,7 @@ namespace NervousBreakdown
         Player player = new Player();
         Card card = new Card();
         Judge judge = new Judge();
-        FormResult formResult = new FormResult();
+        FormResultNPC formResult = new FormResultNPC();
 
         //画像
         private PictureBox[] PictureArray = new PictureBox[52];
@@ -157,7 +157,7 @@ namespace NervousBreakdown
                                 j_hit = judge.Judgement(drawFlag, card.decks[i]);
 
                                 //プレイヤークラスにカードの情報を渡す
-                                player.Select(drawFlag, card.decks[i]);
+                                player.Select(drawFlag, i);
 
                                 //カードを一枚引いているなら
                                 if (drawFlag == true)
@@ -208,19 +208,23 @@ namespace NervousBreakdown
                     {
                         //リザルトに入力した名前を入れる
                         formResult.text = nameText;
- 
+                        //得点を渡す
+                        formResult.GetPoint(playerPoint, npcPoint);
                         //メインの終了
                         this.Visible = false;
                         //リザルトの表示
-
+                        formResult.Show();
                        
                     }
                 }
                 else
                 {
+                    int[] num = player.Infomation();
                     //違う数字の時
-                    ResetCard();
-
+                    ResetCard(num[0]);
+                    ResetCard(num[1]);
+                    //手札リセット
+                    player.Reset();
                     //NPCのターンにする
                     npcTurn = true;
 
@@ -284,22 +288,21 @@ namespace NervousBreakdown
         /// <summary>
         /// 表向きのカードをリセットする関数
         /// </summary>
-        public void ResetCard()
+        public void ResetCard(int num)
         {
-            //手札リセット
-            player.Reset();
+           
 
-            for (int i = 0; i < cardFlag.Length;i++)
-            {
-                if(cpuMemory[i] == true)
+            //for (int i = 0; i < cardFlag.Length;i++)
+            //{
+                if(cpuMemory[num] == true)
                 {
-                    cardFlag[i] = false;
+                    cardFlag[num] = false;
                     // 裏向きにする
-                    PictureArray[i].Image = SetImage(53);
-                    PictureArray[i].Refresh();
-                    cpuMemory[i] = false;
+                    PictureArray[num].Image = SetImage(53);
+                    PictureArray[num].Refresh();
+                    cpuMemory[num] = false;
                 }
-            }            
+            //}            
 
            
         }
@@ -339,7 +342,7 @@ namespace NervousBreakdown
                     j_hit = judge.Judgement(drawFlag, card.decks[num]);
 
                     //プレイヤークラスにカードの情報を渡す
-                    player.Select(drawFlag, card.decks[num]);
+                    player.Select(drawFlag, num);
 
                     //カードを一枚引いているなら
                     if (drawFlag == true)
@@ -372,9 +375,12 @@ namespace NervousBreakdown
                     }
                     else
                     {
+                        int[] num2 = player.Infomation();
                         //違う数字の時
-                        ResetCard();
-
+                        ResetCard(num2[0]);
+                        ResetCard(num2[1]);
+                        //手札リセット
+                        player.Reset();
                         //ターン終了
                         npcTurn = false;
                     }

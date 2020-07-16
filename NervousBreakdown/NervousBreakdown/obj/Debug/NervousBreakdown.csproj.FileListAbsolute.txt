@@ -70,3 +70,5 @@ D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.Ge
 D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.CoreCompileInputs.cache
 D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.exe
 D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.pdb
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMainNPC.resources
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormResultNPC.resources
