@@ -46,14 +46,16 @@ namespace NervousBreakdown
             open[1] = 0;
         }
 
-        public int ReturnNum()
+        public int ReturnNum(List<int> cardList)
         {
             //ランダム生成
             Random random = new Random();
             //カードを引く
-            int cpuCard = random.Next(0, 51);
+            int cpuCard = random.Next(0, cardList.Count());
 
-            return cpuCard;
+            
+
+            return cardList[cpuCard];
         }
 
         public void Cpu(int drawCardNum)

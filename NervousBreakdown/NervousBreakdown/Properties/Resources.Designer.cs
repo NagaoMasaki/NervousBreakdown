@@ -603,9 +603,29 @@ namespace NervousBreakdown.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap character_boy_normal1 {
+            get {
+                object obj = ResourceManager.GetObject("character_boy_normal1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap omocha_robot {
             get {
                 object obj = ResourceManager.GetObject("omocha_robot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap omocha_robot1 {
+            get {
+                object obj = ResourceManager.GetObject("omocha_robot1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
