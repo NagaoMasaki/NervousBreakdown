@@ -1,10 +1,72 @@
 C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe.config
 C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe
 C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.pdb
-C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csprojAssemblyReference.cache
 C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMain.resources
 C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.Properties.Resources.resources
 C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.GenerateResource.cache
 C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.CoreCompileInputs.cache
 C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.exe
 C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.pdb
+C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csprojAssemblyReference.cache
+C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMain.resources
+C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormResult.resources
+C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.Properties.Resources.resources
+C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.GenerateResource.cache
+C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.exe
+C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.pdb
+C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe.config
+C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe
+C:\Users\karam\OneDrive\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.pdb
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormResult.resources
+C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe.config
+C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe
+C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.pdb
+C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csprojAssemblyReference.cache
+C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMain.resources
+C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormResult.resources
+C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.Properties.Resources.resources
+C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.GenerateResource.cache
+C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.CoreCompileInputs.cache
+C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.exe
+C:\Users\kensyu\Documents\NervousBreakdown\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.pdb
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMain.resources
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormResult.resources
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormTitle.resources
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.Properties.Resources.resources
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.GenerateResource.cache
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.CoreCompileInputs.cache
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.exe
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.pdb
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe.config
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.pdb
+C:\Users\kensyu\OneDrive - 株式会社 コスモウィンズ\研修\sinkeisuizyaku\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csprojAssemblyReference.cache
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMainNPC.resources
+C:\Users\kensyu\Desktop\神経衰弱\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormTitle.resources
+C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe.config
+C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe
+C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.pdb
+C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csprojAssemblyReference.cache
+C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMain.resources
+C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMainNPC.resources
+C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormResult.resources
+C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormTitle.resources
+C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.Properties.Resources.resources
+C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.GenerateResource.cache
+C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.CoreCompileInputs.cache
+C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.exe
+C:\Users\kensyu\Desktop\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.pdb
+D:\仕事\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe.config
+D:\仕事\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.exe
+D:\仕事\NervousBreakdown\NervousBreakdown\bin\Debug\NervousBreakdown.pdb
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csprojAssemblyReference.cache
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMain.resources
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormMainNPC.resources
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormResult.resources
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormResultNPC.resources
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.FormTitle.resources
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.Properties.Resources.resources
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.GenerateResource.cache
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.csproj.CoreCompileInputs.cache
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.exe
+D:\仕事\NervousBreakdown\NervousBreakdown\obj\Debug\NervousBreakdown.pdb
