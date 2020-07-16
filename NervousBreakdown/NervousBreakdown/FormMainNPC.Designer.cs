@@ -804,6 +804,7 @@
             this.Controls.Add(this.CardBox1);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.Name = "FormMainNPC";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMainNPC";
             this.Load += new System.EventHandler(this.FormMainNPC_Load);
             this.Click += new System.EventHandler(this.FormMainNPC_Click);

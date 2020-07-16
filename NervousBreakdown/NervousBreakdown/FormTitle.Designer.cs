@@ -40,9 +40,10 @@
             // box
             // 
             this.box.BackColor = System.Drawing.Color.DarkGreen;
-            this.box.Location = new System.Drawing.Point(-1, -2);
+            this.box.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box.Location = new System.Drawing.Point(0, 0);
             this.box.Name = "box";
-            this.box.Size = new System.Drawing.Size(801, 451);
+            this.box.Size = new System.Drawing.Size(1015, 536);
             this.box.TabIndex = 3;
             this.box.TabStop = false;
             // 
@@ -53,7 +54,7 @@
             this.TitleLabel.BackColor = System.Drawing.Color.DarkGreen;
             this.TitleLabel.Font = new System.Drawing.Font("ＭＳ ゴシック", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleLabel.ForeColor = System.Drawing.Color.White;
-            this.TitleLabel.Location = new System.Drawing.Point(176, 61);
+            this.TitleLabel.Location = new System.Drawing.Point(282, 73);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(426, 97);
             this.TitleLabel.TabIndex = 4;
@@ -63,7 +64,7 @@
             // OnePlayButton
             // 
             this.OnePlayButton.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.OnePlayButton.Location = new System.Drawing.Point(119, 299);
+            this.OnePlayButton.Location = new System.Drawing.Point(214, 356);
             this.OnePlayButton.Name = "OnePlayButton";
             this.OnePlayButton.Size = new System.Drawing.Size(182, 61);
             this.OnePlayButton.TabIndex = 5;
@@ -74,7 +75,7 @@
             // CPUPlayButton
             // 
             this.CPUPlayButton.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.CPUPlayButton.Location = new System.Drawing.Point(470, 299);
+            this.CPUPlayButton.Location = new System.Drawing.Point(594, 356);
             this.CPUPlayButton.Name = "CPUPlayButton";
             this.CPUPlayButton.Size = new System.Drawing.Size(208, 61);
             this.CPUPlayButton.TabIndex = 6;
@@ -85,7 +86,7 @@
             // NameBox
             // 
             this.NameBox.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.NameBox.Location = new System.Drawing.Point(384, 215);
+            this.NameBox.Location = new System.Drawing.Point(495, 267);
             this.NameBox.Multiline = true;
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(144, 33);
@@ -98,7 +99,7 @@
             this.label2.BackColor = System.Drawing.Color.DarkGreen;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(189, 200);
+            this.label2.Location = new System.Drawing.Point(359, 252);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 48);
             this.label2.TabIndex = 8;
@@ -108,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1015, 536);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.NameBox);
             this.Controls.Add(this.CPUPlayButton);
@@ -116,6 +117,7 @@
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.box);
             this.Name = "FormTitle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTitle";
             ((System.ComponentModel.ISupportInitialize)(this.box)).EndInit();
             this.ResumeLayout(false);

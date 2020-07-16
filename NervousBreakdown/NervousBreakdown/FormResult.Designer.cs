@@ -144,7 +144,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::NervousBreakdown.Properties.Resources.ribbon1;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 397);
+            this.pictureBox2.Location = new System.Drawing.Point(-2, 397);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(347, 127);
             this.pictureBox2.TabIndex = 10;
@@ -408,7 +408,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1031, 536);
+            this.ClientSize = new System.Drawing.Size(1015, 536);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -441,6 +441,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
             this.Name = "FormResult";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormResult_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FormResult_MouseClick);

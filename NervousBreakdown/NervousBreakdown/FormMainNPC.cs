@@ -60,6 +60,9 @@ namespace NervousBreakdown
         //スタートフラグ
         private bool startFlag = false;
 
+        //カードの数を取り出すリスト
+        private List<int> cardList = new List<int>();
+
         public FormMainNPC()
         {
             InitializeComponent();
@@ -127,6 +130,10 @@ namespace NervousBreakdown
             PictureArray[50] = this.CardBox51;
             PictureArray[51] = this.CardBox52;
 
+            for(int i = 0;i < 51; i++)
+            {
+                cardList.Add(i);
+            }
         }
 
         /// <summary>
