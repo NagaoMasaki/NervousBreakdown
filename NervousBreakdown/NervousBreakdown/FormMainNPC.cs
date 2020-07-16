@@ -207,16 +207,20 @@ namespace NervousBreakdown
                     //同じ数字の時
                     GetPoint();
 
+                    int[] num = player.Infomation();
+                    cardList.Remove(num[0]);
+                    cardList.Remove(num[1]);
                     //プレイヤーとNPCの合計のポイントを持つ変数
                     int sum = playerPoint + npcPoint;
 
                     //26ペアそろったか？
-                    if (sum == 26)
+                    if (sum == 1)
                     {
                         //リザルトに入力した名前を入れる
                         formResult.text = nameText;
                         //得点を渡す
                         formResult.GetPoint(playerPoint, npcPoint);
+                        formResult.GetFormMain(this);
                         //メインの終了
                         this.Visible = false;
                         //リザルトの表示
@@ -321,13 +325,13 @@ namespace NervousBreakdown
         private void NpcMove()
         {
              //ランダムで数字を取得
-             int num = player.ReturnNum();
+             int num = player.ReturnNum(cardList);
             
             //引いてない数字が出るまで回す
             while (cardFlag[num] == true)
             {
                 //ランダムで数字を取得
-                num = player.ReturnNum();
+                num = player.ReturnNum(cardList);
             }
             
             if(npcInterval >= NPC_DROW_INTERVAL && !twoDrawFlag)
@@ -379,6 +383,10 @@ namespace NervousBreakdown
                     {
                         //同じ数字の時
                         GetPoint();
+
+                        int[] num3 = player.Infomation();
+                        cardList.Remove(num3[0]);
+                        cardList.Remove(num3[1]);
                     }
                     else
                     {

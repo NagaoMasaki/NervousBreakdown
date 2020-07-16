@@ -40,6 +40,8 @@ namespace NervousBreakdown
 
         private void FormResultNPC_Load(object sender, EventArgs e)
         {
+            pictureBox1.Visible = true;
+            pictureBox2.Visible = true;
             //それぞれの枚数と名前を表示する
             playerPoint.Text = p_Point.ToString();
             npcPoint.Text = n_Point.ToString();
